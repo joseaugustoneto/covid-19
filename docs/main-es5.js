@@ -1,3 +1,30 @@
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"], {
         /***/ "./$$_lazy_route_resource lazy recursive": 
         /*!******************************************************!*\
@@ -320,7 +347,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"botoesFixos\">\n  <div (click)=\"abrirFatoOuFake()\">#Fato-ou-Fake</div>\n  <div (click)=\"abrirFatoOuFake()\">#Quizz</div>\n  <div>#Estou-com-covid?</div>\n  <div>Você possui filhos?</div>\n</div>\n<div class=\"header\">\n  <img src=\"/assets/head_logo.png\">\n</div>\n<div class=\"conteudo\">\n  <router-outlet></router-outlet>\n</div>\n\n<div class=\"rodape\">\n  <div class=\"direitos\">\n    © 2020 Central Corona. Todos os direitos reservados.\n  </div>\n</div>");
+            /* harmony default export */ __webpack_exports__["default"] = ("<div class=\"botoesFixos\">\n  <div (click)=\"abrirFatoOuFake()\">#Fato-ou-Fake</div>\n  <div (click)=\"abrirQuiz()\">#Quizz</div>\n  <div>#Estou-com-covid?</div>\n  <div>Você possui filhos?</div>\n</div>\n<div class=\"header\">\n  <img src=\"/assets/head_logo.png\">\n</div>\n<div class=\"conteudo\">\n  <router-outlet></router-outlet>\n</div>\n\n<div class=\"rodape\">\n  <div class=\"direitos\">\n    © 2020 Central Corona. Todos os direitos reservados.\n  </div>\n</div>");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/categorias/categorias.component.html": 
@@ -408,7 +435,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("<p>quiz works!</p>\n");
+            /* harmony default export */ __webpack_exports__["default"] = ("<h1 mat-dialog-title>Quizz Corona Central</h1>\n<div class=\"perguntaResposta\" mat-dialog-content>\n  <div *ngIf=\"!finalizou\">\n    <div>Pergunta: {{ perguntaAtual.pergunta }}</div>\n    <br />\n    <div class=\"resposta\" *ngIf=\"!esconderResposta\">\n      {{ perguntaAtual.resposta }}\n    </div>\n  </div>\n  <br />\n  <div *ngIf=\"esconderResposta\">\n    <button mat-button (click)=\"mostraResposta(true)\">VERDADEIRO</button>\n    <button mat-button (click)=\"mostraResposta(falso)\">FALSO</button>\n  </div>\n  <div *ngIf=\"!esconderResposta && !finalizou\">\n    <button mat-button (click)=\"proxima()\">PRÓXIMA</button>\n  </div>\n  <div *ngIf=\"!esconderResposta && finalizou\">\n    <div>\n      Muito Obrigado por responder nosso quizz, esperamos que você tenha\n      conseguido se informar melhor se divertindo!\n    </div>\n    <button mat-button (click)=\"onNoClick()\">Fechar</button>\n  </div>\n</div>\n<div mat-dialog-actions>\n  <button mat-button (click)=\"onNoClick()\">Fechar</button>\n</div>\n");
             /***/ 
         }),
         /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/relatorio/relatorio.component.html": 
@@ -785,7 +812,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = (".botoesFixos {\n  height: 70px;\n  position: fixed;\n  width: 100%;\n  z-index: 1;\n  background-color: white;\n  display: flex;\n  justify-content: space-evenly;\n  align-items: center;\n  top: 0px;\n}\n.header {\n  height: 100px;\n  background-color: white;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin-top: 70px;\n}\n@media only screen and (max-width: 780px) {\n  .header {\n    height: 70px;\n  }\n}\n@media only screen and (max-width: 440px) {\n  .header {\n    height: 59px;\n  }\n}\n.header img {\n  height: 153%;\n  top: 30px;\n  position: relative;\n}\n@media only screen and (max-width: 780px) {\n  .header img {\n    height: 145%;\n    top: 22px;\n  }\n}\n@media only screen and (max-width: 440px) {\n  .header img {\n    height: 120%;\n    top: 22px;\n  }\n}\n.rodape {\n  background-color: #791c13;\n}\n.rodape .direitos {\n  color: white;\n  text-align: center;\n  height: 30px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL25ldG8vbmFzYS9jb3ZpZC0xOS9zcmMvYXBwL2FwcC5jb21wb25lbnQubGVzcyIsInNyYy9hcHAvYXBwLmNvbXBvbmVudC5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUdBO0VBQ0UsWUFBQTtFQUNBLGVBQUE7RUFDQSxXQUFBO0VBQ0EsVUFBQTtFQUNBLHVCQUFBO0VBQ0EsYUFBQTtFQUNBLDZCQUFBO0VBQ0EsbUJBQUE7RUFDQSxRQUFBO0FDRkY7QURLQTtFQUNFLGFBQUE7RUFDQSx1QkFBQTtFQUNBLGFBQUE7RUFDQSxtQkFBQTtFQUNBLHVCQUFBO0VBQ0EsZ0JBQUE7QUNIRjtBREtFO0VBQUE7SUFDRSxZQUFBO0VDRkY7QUFDRjtBREdFO0VBQUE7SUFDRSxZQUFBO0VDQUY7QUFDRjtBRENFO0VBQ0UsWUFBQTtFQUNBLFNBQUE7RUFDQSxrQkFBQTtBQ0NKO0FEQ0k7RUFBQTtJQUNFLFlBQUE7SUFDQSxTQUFBO0VDRUo7QUFDRjtBREFJO0VBQUE7SUFDRSxZQUFBO0lBQ0EsU0FBQTtFQ0dKO0FBQ0Y7QURDQTtFQUNFLHlCQUFBO0FDQ0Y7QURBRTtFQUNFLFlBQUE7RUFDQSxrQkFBQTtFQUNBLFlBQUE7QUNFSiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQubGVzcyIsInNvdXJjZXNDb250ZW50IjpbIkBjb3JQcmluY2lwYWw6ICNlMzA2MTM7XG5AY29yRXNjdXJhOiAjNzkxYzEzO1xuQGNvclNlZ3VuZGFyaWE6IHdoaXRlO1xuLmJvdG9lc0ZpeG9ze1xuICBoZWlnaHQ6IDcwcHg7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgd2lkdGg6IDEwMCU7XG4gIHotaW5kZXg6IDE7XG4gIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWV2ZW5seTtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgdG9wOiAwcHg7XG59XG5cbi5oZWFkZXIge1xuICBoZWlnaHQ6IDEwMHB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBAY29yU2VndW5kYXJpYTtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIG1hcmdpbi10b3A6IDcwcHg7XG5cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3ODBweCkge1xuICAgIGhlaWdodDogNzBweDtcbiAgfVxuICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDQ0MHB4KSB7XG4gICAgaGVpZ2h0OiA1OXB4O1xuICB9XG4gICYgaW1nIHtcbiAgICBoZWlnaHQ6IDE1MyU7XG4gICAgdG9wOiAzMHB4O1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcblxuICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzgwcHgpIHtcbiAgICAgIGhlaWdodDogMTQ1JTtcbiAgICAgIHRvcDogMjJweDtcbiAgICB9XG5cbiAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDQ0MHB4KSB7XG4gICAgICBoZWlnaHQ6IDEyMCU7XG4gICAgICB0b3A6IDIycHg7XG4gICAgfVxuICB9XG59XG5cbi5yb2RhcGUge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBAY29yRXNjdXJhO1xuICAmIC5kaXJlaXRvcyB7XG4gICAgY29sb3I6IEBjb3JTZWd1bmRhcmlhO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBoZWlnaHQ6IDMwcHg7XG4gIH1cbn1cbiIsIi5ib3RvZXNGaXhvcyB7XG4gIGhlaWdodDogNzBweDtcbiAgcG9zaXRpb246IGZpeGVkO1xuICB3aWR0aDogMTAwJTtcbiAgei1pbmRleDogMTtcbiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtZXZlbmx5O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICB0b3A6IDBweDtcbn1cbi5oZWFkZXIge1xuICBoZWlnaHQ6IDEwMHB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIG1hcmdpbi10b3A6IDcwcHg7XG59XG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc4MHB4KSB7XG4gIC5oZWFkZXIge1xuICAgIGhlaWdodDogNzBweDtcbiAgfVxufVxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA0NDBweCkge1xuICAuaGVhZGVyIHtcbiAgICBoZWlnaHQ6IDU5cHg7XG4gIH1cbn1cbi5oZWFkZXIgaW1nIHtcbiAgaGVpZ2h0OiAxNTMlO1xuICB0b3A6IDMwcHg7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzgwcHgpIHtcbiAgLmhlYWRlciBpbWcge1xuICAgIGhlaWdodDogMTQ1JTtcbiAgICB0b3A6IDIycHg7XG4gIH1cbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNDQwcHgpIHtcbiAgLmhlYWRlciBpbWcge1xuICAgIGhlaWdodDogMTIwJTtcbiAgICB0b3A6IDIycHg7XG4gIH1cbn1cbi5yb2RhcGUge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjNzkxYzEzO1xufVxuLnJvZGFwZSAuZGlyZWl0b3Mge1xuICBjb2xvcjogd2hpdGU7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgaGVpZ2h0OiAzMHB4O1xufVxuIl19 */");
+            /* harmony default export */ __webpack_exports__["default"] = (".botoesFixos {\n  height: 70px;\n  position: fixed;\n  width: 100%;\n  z-index: 1;\n  background-color: white;\n  display: flex;\n  justify-content: space-evenly;\n  align-items: center;\n  top: 0px;\n}\n.botoesFixos div {\n  cursor: pointer;\n}\n.header {\n  height: 100px;\n  background-color: white;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin-top: 70px;\n}\n@media only screen and (max-width: 780px) {\n  .header {\n    height: 70px;\n  }\n}\n@media only screen and (max-width: 440px) {\n  .header {\n    height: 59px;\n  }\n}\n.header img {\n  height: 153%;\n  top: 30px;\n  position: relative;\n}\n@media only screen and (max-width: 780px) {\n  .header img {\n    height: 145%;\n    top: 22px;\n  }\n}\n@media only screen and (max-width: 440px) {\n  .header img {\n    height: 120%;\n    top: 22px;\n  }\n}\n.rodape {\n  background-color: #791c13;\n}\n.rodape .direitos {\n  color: white;\n  text-align: center;\n  height: 30px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL25ldG8vbmFzYS9jb3ZpZC0xOS9zcmMvYXBwL2FwcC5jb21wb25lbnQubGVzcyIsInNyYy9hcHAvYXBwLmNvbXBvbmVudC5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUdBO0VBQ0UsWUFBQTtFQUNBLGVBQUE7RUFDQSxXQUFBO0VBQ0EsVUFBQTtFQUNBLHVCQUFBO0VBQ0EsYUFBQTtFQUNBLDZCQUFBO0VBQ0EsbUJBQUE7RUFDQSxRQUFBO0FDRkY7QURHRTtFQUNFLGVBQUE7QUNESjtBREtBO0VBQ0UsYUFBQTtFQUNBLHVCQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxnQkFBQTtBQ0hGO0FES0U7RUFBQTtJQUNFLFlBQUE7RUNGRjtBQUNGO0FER0U7RUFBQTtJQUNFLFlBQUE7RUNBRjtBQUNGO0FEQ0U7RUFDRSxZQUFBO0VBQ0EsU0FBQTtFQUNBLGtCQUFBO0FDQ0o7QURDSTtFQUFBO0lBQ0UsWUFBQTtJQUNBLFNBQUE7RUNFSjtBQUNGO0FEQUk7RUFBQTtJQUNFLFlBQUE7SUFDQSxTQUFBO0VDR0o7QUFDRjtBRENBO0VBQ0UseUJBQUE7QUNDRjtBREFFO0VBQ0UsWUFBQTtFQUNBLGtCQUFBO0VBQ0EsWUFBQTtBQ0VKIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5sZXNzIiwic291cmNlc0NvbnRlbnQiOlsiQGNvclByaW5jaXBhbDogI2UzMDYxMztcbkBjb3JFc2N1cmE6ICM3OTFjMTM7XG5AY29yU2VndW5kYXJpYTogd2hpdGU7XG4uYm90b2VzRml4b3N7XG4gIGhlaWdodDogNzBweDtcbiAgcG9zaXRpb246IGZpeGVkO1xuICB3aWR0aDogMTAwJTtcbiAgei1pbmRleDogMTtcbiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtZXZlbmx5O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICB0b3A6IDBweDtcbiAgJiBkaXYge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgfVxufVxuXG4uaGVhZGVyIHtcbiAgaGVpZ2h0OiAxMDBweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogQGNvclNlZ3VuZGFyaWE7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBtYXJnaW4tdG9wOiA3MHB4O1xuXG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzgwcHgpIHtcbiAgICBoZWlnaHQ6IDcwcHg7XG4gIH1cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA0NDBweCkge1xuICAgIGhlaWdodDogNTlweDtcbiAgfVxuICAmIGltZyB7XG4gICAgaGVpZ2h0OiAxNTMlO1xuICAgIHRvcDogMzBweDtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG5cbiAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc4MHB4KSB7XG4gICAgICBoZWlnaHQ6IDE0NSU7XG4gICAgICB0b3A6IDIycHg7XG4gICAgfVxuXG4gICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA0NDBweCkge1xuICAgICAgaGVpZ2h0OiAxMjAlO1xuICAgICAgdG9wOiAyMnB4O1xuICAgIH1cbiAgfVxufVxuXG4ucm9kYXBlIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogQGNvckVzY3VyYTtcbiAgJiAuZGlyZWl0b3Mge1xuICAgIGNvbG9yOiBAY29yU2VndW5kYXJpYTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgaGVpZ2h0OiAzMHB4O1xuICB9XG59XG4iLCIuYm90b2VzRml4b3Mge1xuICBoZWlnaHQ6IDcwcHg7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgd2lkdGg6IDEwMCU7XG4gIHotaW5kZXg6IDE7XG4gIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWV2ZW5seTtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgdG9wOiAwcHg7XG59XG4uYm90b2VzRml4b3MgZGl2IHtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuLmhlYWRlciB7XG4gIGhlaWdodDogMTAwcHg7XG4gIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgbWFyZ2luLXRvcDogNzBweDtcbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzgwcHgpIHtcbiAgLmhlYWRlciB7XG4gICAgaGVpZ2h0OiA3MHB4O1xuICB9XG59XG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDQ0MHB4KSB7XG4gIC5oZWFkZXIge1xuICAgIGhlaWdodDogNTlweDtcbiAgfVxufVxuLmhlYWRlciBpbWcge1xuICBoZWlnaHQ6IDE1MyU7XG4gIHRvcDogMzBweDtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xufVxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3ODBweCkge1xuICAuaGVhZGVyIGltZyB7XG4gICAgaGVpZ2h0OiAxNDUlO1xuICAgIHRvcDogMjJweDtcbiAgfVxufVxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA0NDBweCkge1xuICAuaGVhZGVyIGltZyB7XG4gICAgaGVpZ2h0OiAxMjAlO1xuICAgIHRvcDogMjJweDtcbiAgfVxufVxuLnJvZGFwZSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICM3OTFjMTM7XG59XG4ucm9kYXBlIC5kaXJlaXRvcyB7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBoZWlnaHQ6IDMwcHg7XG59XG4iXX0= */");
             /***/ 
         }),
         /***/ "./src/app/app.component.ts": 
@@ -801,21 +828,37 @@
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
             /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
             /* harmony import */ var _quiz_quiz_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./quiz/quiz.component */ "./src/app/quiz/quiz.component.ts");
+            /* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/es2015/index.js");
             var AppComponent = /** @class */ (function () {
-                function AppComponent(dialog) {
+                function AppComponent(dialog, db) {
                     this.dialog = dialog;
+                    this.db = db;
                     this.atualizaNoticias = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
                 }
                 AppComponent.prototype.abrirFatoOuFake = function () {
                     window.open("https://www.saude.gov.br/component/tags/tag/novo-coronavirus-fake-news?limitstart=0", "_blank");
                 };
                 AppComponent.prototype.abrirQuiz = function () {
-                    this.dialog.open(_quiz_quiz_component__WEBPACK_IMPORTED_MODULE_3__["QuizComponent"]);
+                    return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+                        var dialogRef;
+                        var _this = this;
+                        return __generator(this, function (_a) {
+                            dialogRef = this.dialog.open(_quiz_quiz_component__WEBPACK_IMPORTED_MODULE_3__["QuizComponent"]);
+                            dialogRef.afterClosed().subscribe(function (result) { return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0, function () {
+                                return __generator(this, function (_a) {
+                                    this.db.collection("quiz").add(Object.assign({}, result, { dataInclusao: new Date() }));
+                                    return [2 /*return*/];
+                                });
+                            }); });
+                            return [2 /*return*/];
+                        });
+                    });
                 };
                 return AppComponent;
             }());
             AppComponent.ctorParameters = function () { return [
-                { type: _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialog"] }
+                { type: _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialog"] },
+                { type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_4__["AngularFirestore"] }
             ]; };
             tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
@@ -932,7 +975,8 @@
                         _dialog_compra_dialog_compra_component__WEBPACK_IMPORTED_MODULE_17__["DialogCompraComponent"],
                         _resultado_quiz_resultado_quiz_component__WEBPACK_IMPORTED_MODULE_25__["ResultadoQuizComponent"],
                         _conheca_nossanave_conheca_nossanave_component__WEBPACK_IMPORTED_MODULE_27__["ConhecaNossanaveComponent"],
-                        _salvo_com_sucesso_salvo_com_sucesso_component__WEBPACK_IMPORTED_MODULE_28__["SalvoComSucessoComponent"]
+                        _salvo_com_sucesso_salvo_com_sucesso_component__WEBPACK_IMPORTED_MODULE_28__["SalvoComSucessoComponent"],
+                        _quiz_quiz_component__WEBPACK_IMPORTED_MODULE_33__["QuizComponent"]
                     ],
                 })
             ], AppModule);
@@ -1081,7 +1125,6 @@
                 function DialogCompraComponent(dialogRef, data) {
                     this.dialogRef = dialogRef;
                     this.data = data;
-                    debugger;
                 }
                 DialogCompraComponent.prototype.onNoClick = function () {
                     this.dialogRef.close();
@@ -1680,7 +1723,7 @@
         /***/ (function (module, __webpack_exports__, __webpack_require__) {
             "use strict";
             __webpack_require__.r(__webpack_exports__);
-            /* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3F1aXovcXVpei5jb21wb25lbnQubGVzcyJ9 */");
+            /* harmony default export */ __webpack_exports__["default"] = (".perguntaResposta {\n  text-align: center;\n}\n.perguntaResposta .resposta {\n  color: #e30613;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL25ldG8vbmFzYS9jb3ZpZC0xOS9zcmMvYXBwL3F1aXovcXVpei5jb21wb25lbnQubGVzcyIsInNyYy9hcHAvcXVpei9xdWl6LmNvbXBvbmVudC5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VBQ0Usa0JBQUE7QUNERjtBREdFO0VBQ0UsY0FBQTtBQ0RKIiwiZmlsZSI6InNyYy9hcHAvcXVpei9xdWl6LmNvbXBvbmVudC5sZXNzIiwic291cmNlc0NvbnRlbnQiOlsiQGNvclByaW5jaXBhbDogI2UzMDYxMztcblxuLnBlcmd1bnRhUmVzcG9zdGEge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG5cbiAgJiAucmVzcG9zdGEge1xuICAgIGNvbG9yOiBAY29yUHJpbmNpcGFsO1xuICB9XG59XG4iLCIucGVyZ3VudGFSZXNwb3N0YSB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cbi5wZXJndW50YVJlc3Bvc3RhIC5yZXNwb3N0YSB7XG4gIGNvbG9yOiAjZTMwNjEzO1xufVxuIl19 */");
             /***/ 
         }),
         /***/ "./src/app/quiz/quiz.component.ts": 
@@ -1694,19 +1737,175 @@
             /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "QuizComponent", function () { return QuizComponent; });
             /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
             /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+            /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
             var QuizComponent = /** @class */ (function () {
-                function QuizComponent() {
+                function QuizComponent(dialogRef, data) {
+                    this.dialogRef = dialogRef;
+                    this.data = data;
+                    this.perguntas = [
+                        {
+                            pergunta: "O coronavírus não sobrevive em locais quentes, portanto, países de clima tropical não apresentam epidemia da Covid-19",
+                            resposta: "Falso",
+                            descricao: "Embora alguns estudos tenham evidenciado uma redução nos casos de COVID-19 em climas quentes, outros fatores podem influenciar mais significativamente a taxa de contágio. Dessa forma, não há evidências de ambientes que sejam imunes à presença do vírus.",
+                            fonte: "Estudo feito pelo Massachusetts Institute of Technology (MIT), nos Estados Unidos",
+                            imagem: "assets/quiz/qst1.png",
+                        },
+                        {
+                            pergunta: "O compartilhamento de objetos (como celulares) apresenta um baixo risco de contágio",
+                            resposta: "Falso, muito falso",
+                            descricao: "Os celulares, atualmente, são um dos maiores meios de disseminação de doenças infectocontagiosas. Dessa forma, além da prevenção de contato e da higiene com a pele e roupas, o celular deve ser higienizado com o uso de álcool 70%.",
+                            fonte: "Estudo feito pela Dscout Research",
+                            imagem: "assets/quiz/qst2.png",
+                        },
+                        {
+                            pergunta: "Ao ter contato com ambientes externos, o ideal é o uso de da máscara facial, independente do tempo e grau de exposição.",
+                            resposta: "Verdadeiro, mas não se esqueça de lavar as mãos",
+                            descricao: "A recomendação é de que as máscaras descartáveis sejam substituídas a cada 4 horas, seguindo as medidas de higiene e prevenção de contágio. Entretanto, a máscara não torna impossível a contaminação pela doença.",
+                            fonte: "USO DE MÁSCARA FACIAL PARA LIMITAR A TRANSMISSÃO DA COVID-19. Leila Posenato Garcia",
+                            imagem: "assets/quiz/qst3.png",
+                        },
+                        {
+                            pergunta: "Animais como cães e gatos podem transmitir a doença?",
+                            resposta: "Incerto",
+                            descricao: "De acordo com o CDC (Center for Disease Control and Prevention), não há evidência científica de que animais tenham um papel significativo na disseminação do vírus, embora a origem do vírus seja de animais.",
+                            fonte: "CDC (Center for Disease Control and Prevention)",
+                            imagem: "assets/quiz/qst4.png",
+                        },
+                        {
+                            pergunta: "Animais como cães e gatos podem testar positivo para a Covid-19?",
+                            resposta: "Verdadeiro, mas com ressalvas",
+                            descricao: "Há poucos registros de casos destes animais que foram confirmadamente infectados pelo vírus. Entretanto, estes animais não apresentam, até o momento, papel significativo na disseminação do vírus. Porém, a recomendação é de que estes animais também devem ter o contato evitado com casos suspeitos e confirmados da doença.",
+                            fonte: "Centro Pan-Americano de Febre Aftosa e Saúde Pública Veterinária da Organização Pan-Americana da Saúde/Organização Mundial da Saúde (PANAFTOSA-OPAS/OMS) e a Proteção Animal Mundial ",
+                            imagem: "assets/quiz/qst5.png",
+                        },
+                        {
+                            pergunta: "Acordei com mal estar, tosse, febre, porém, sem qualquer dificuldade respiratória. Devo procurar o atendimento médico?",
+                            resposta: "Depende",
+                            descricao: "A SBI (Sociedade Brasileira de Infectologia) recomenda que somente casos com sintomas mais graves, como dificuldade para respirar e febre alta (a partir de 39ºC). Entretanto, o Disk Saúde (136) está preparado para orientações específicas sem a necessidade de comparecer ao ambiente hospitalar.",
+                            fonte: "Organização Mundial de Saúde (OMS), Ministério da Saúde (MS), Sociedade Brasileira de Infectologia (SBI)",
+                            imagem: "assets/quiz/qst6.png",
+                        },
+                        {
+                            pergunta: "Há 1 mês tive tosse, febre e dor no corpo. É possível saber se esse quadro foi causado pelo Sars-CoV-2?",
+                            resposta: "Verdadeiro",
+                            descricao: "Inicialmente, apenas testes moleculares eram realizados. Porém, já há a possibilidade da dosagem de substâncias imunológicas que indicam a infecção nova ou antiga pelo vírus. Dessa forma, é possível realizar um exame que pode evidenciar ou não o contato com a doença. Atualmente, existem testes com alta sensibilidade e especificidade, que tornam seu resultado mais fidedigno. Porém, resultados positivos e/ou negativos não excluem a necessidade do isolamento e das medidas de precaução.",
+                            fonte: "Organização Mundial de Saúde (OMS), Ministério da Saúde (MS)",
+                            imagem: "assets/quiz/qst7.png",
+                        },
+                        {
+                            pergunta: "Existe vacina contra a Covid-19?",
+                            resposta: "Infelizmente, ainda é falso",
+                            descricao: "Não. Atualmente, diversos testes estão sendo feitas pelo mundo. Porém, ainda não há alguma destas que tenha evidências científicas e seja homologada pelos órgãos de vigilância para a prevenção da doença em humanos. ",
+                            fonte: "Organização Mundial de Saúde (OMS), Ministério da Saúde (MS)",
+                            imagem: "assets/quiz/qst8.png",
+                        },
+                        {
+                            pergunta: "As vacinas para pneumonia, que já existem, não apresentam qualquer benefício para um possível contato com o Sars-CoV-2",
+                            resposta: "Falso, mas não é por benefício direto",
+                            descricao: "Embora a vacina não tenha efeito direto contra o vírus, ela protege contra outros microorganismos causadores de infecções pulmonares. Caso se encaixe no grupo para recebimento dessas vacina, pode haver benefício, tendo em vista a possibilidade de desenvolvimento de infecções secundárias à Covid-19.  ",
+                            fonte: "Organização Mundial de Saúde (OMS)",
+                            imagem: "assets/quiz/qst9.png",
+                        },
+                        {
+                            pergunta: "As crianças apresentam menor risco de desenvolvimento da doença?",
+                            resposta: "Verdadeiro, até o momento",
+                            descricao: "Ainda não se existe um consenso sobre o risco das crianças desenvolverem a doença. Entretanto, o que se observa é uma menor taxa de infecção causada por COVID-19 relacionada a essa faixa etária em comparação com o número total de casos na população em geral. Além disso, ao que se refere à transmissão vertical, ou seja, capacidade da mãe passar a doença para o feto durante a gestação, observa-se que não há evidência científica que demonstre a sua existência. ",
+                            fonte: "O NOVO CORONAVÍRUS E O RISCO PARA A SAÚDE DAS CRIANÇAS, José Manuel da Silva Vilelas",
+                            imagem: "assets/quiz/qst10.png",
+                        },
+                        {
+                            pergunta: "Grávidas estão no grupo de risco da Covid-19?",
+                            resposta: "Pelo fato da gesta\u00E7\u00E3o ser um per\u00EDodo com diversas altera\u00E7\u00F5es fisiol\u00F3gicas, e estar relacionada a complica\u00E7\u00F5es diversas em infec\u00E7\u00F5es anteriores como SARS-CoV, influenza H1N1 e MERSCoV, e ent\u00E3o, devido ao elevado risco de morbimortalidade, a Organiza\u00E7\u00E3o Mundial da Sa\u00FAde (OMS) classificou as gestantes como grupo de risco para Covid-19. Entretanto, ainda n\u00E3o se tem evid\u00EAncias de que a doen\u00E7a nessa parcela populacional seja realmente mais grave. Mas as gestantes devem ser orientadas quanto ao isolamento social, uso de m\u00E1scaras, sinais e sintomas assim como as medidas de preven\u00E7\u00E3o, para que al\u00E9m de controlar a doen\u00E7a, tamb\u00E9m diminui a carga de ansiedade que envolve gerar e dar a luz nesse contexto. Para tanto, deve-se ressaltar que os pr\u00E9-natais de baixo risco devem ficar com intervalos maiores, e as consultas devem ser marcadas com anteced\u00EAncia  bem como a telemedicina deve ser institu\u00EDda como um mecanismo nessa pandemia.Quanto \u00E0 amamenta\u00E7\u00E3o, pode-se destacar que o COVID-19 n\u00E3o foi detectado em leite materno e, portanto, n\u00E3o est\u00E1 contraindicada durante esse per\u00EDodo. Contudo, mesmo assim devem ser tomadas algumas precau\u00E7\u00F5es para evitar a dissemina\u00E7\u00E3o por outros meios para o rec\u00E9m-nascido como lavagem das m\u00E3os, uso de \u00E1lcool em gel e m\u00E1scaras, al\u00E9m de em casos de extra\u00E7\u00E3o do leite materno devem-se seguir as medidas de recomenda\u00E7\u00E3o de limpeza das bombas depois de cada uso.",
+                            descricao: "Verdadeiro, mas por que?",
+                            fonte: "COVID-19: MANEJO DE GESTANTES, Mohamed Kassen Saidah GESTANTES NO CONTEXTO DA PANDEMIA DA COVID-19: REFLEX\u00D5ES E DESAFIOS Fernanda Matheus Estrela, Keile Kemyly Assis da Silva, Moniky Ara\u00FAjo da Cruz, Nadirlene Pereira Gomes",
+                            imagem: "assets/quiz/qst11.png",
+                        },
+                        {
+                            pergunta: "O uso de máscaras e/ou luvas representam a melhor forma de proteção contra a contaminação pelo vírus",
+                            resposta: "Falso",
+                            descricao: "A melhor forma de proteção contra o contágio é a lavagem com água e sabão das mãos, seguida de distanciamento social. Entretanto, quando necessário furar o isolamento o uso de máscaras e é altamente recomendável, visto que são efetivas como barreiras físicas capazes de limitar a transmissão em curtas distâncias. E quanto as luvas a recomendação é que fiquem restritas aos profissionais de saúde dedicados ao manejo dos pacientes portadores da doença.",
+                            fonte: "USO DE M\u00C1SCARA FACIAL PARA LIMITAR A TRANSMISS\u00C3O DA COVID-19. Leila Posenato Garcia MANUAL COVID-19 - PREVEN\u00C7\u00C3O E TRATAMENTO. Zhejiang University School of Medicine ESTRAT\u00C9GIAS DE PREVEN\u00C7\u00C3O FRENTE \u00C0 PANDEMIA POR COVID-19. Aline de Oliveira Ramalho, Talita dos Santos Rosa, Carol Viviana Serna Gonz\u00E1lez, Paula de Souza Silva Freitas e Paula Cristina Nogueira",
+                            imagem: "assets/quiz/qst12.png",
+                        },
+                        {
+                            pergunta: "A taxa de mortalidade da doença está diretamente relacionada com o nível socioeconômico",
+                            resposta: "Falso",
+                            descricao: "Sabe-se que todas as classes sociais e regiões do mundo tem a capacidade de desenvolver doenças respiratórias e elevar os riscos de morbimortalidade. Entretanto, o menor poder aquisitivo, associado às maiores taxas de aglomeração, às exposições ambientais e ainda às más condições de moradia, tornam esses indivíduos ainda mais susceptíveis a doença. Apesar disso, ainda não existem evidencias da relação do nível socioeconômico com a taxa de mortalidade no Brasil e no mundo.",
+                            fonte: "REGIÃO NORTE DO BRASIL E A PANDEMIA DE COVID-19: ANÁLISE SOCIOECONÔMICA E EPIDEMIOLÓGICA. Flávia Daspett Mendonça, Santiago Soares Rocha, Daniel Lucas Pimenta Pinheiro, Stefan Vilges de Oliveira",
+                            imagem: "assets/quiz/qst13.png",
+                        },
+                        {
+                            pergunta: "Não é possível ser contaminado mais de uma vez pelo Sars-CoV-2",
+                            resposta: "Ainda não sabemos",
+                            descricao: "Mesmo com a produção diária de conteúdo e com as crescentes pesquisas sobre o assunto ainda não se pode afirmar que existe a possibilidade de reinfecção nem que não exista, pois não se chegou a um consenso. Maria Van Kerkhove, líder técnica da OMS para covid-19, afirma que Não são vírus ativos, não é reinfecção, não é reativação. É, na verdade, parte do processo de cura que tem sido capturado pelo PCR, enquanto outros pesquisadores defendem que Precisamos ver qual é a dimensão da reinfecção e se é suficiente para produzir um volume grande de casos. Aparentemente, é encontrada em algumas situações, quando não se tem certeza se os testes feitos foram adequados ou não como José Cássio de Moraes, professor da Faculdade de Ciências Médicas da Santa Casa de São Paulo.",
+                            fonte: "Organização Mundial de Saúde (OMS) Dra. Maria Van Kerkhov e José Cássio de Moraes.",
+                            imagem: "assets/quiz/qst14.png",
+                        },
+                        {
+                            pergunta: "Qual a origem do vírus? Há indícios de que o vírus tenha sido feito em laboratório? ",
+                            resposta: "Não há um consenso",
+                            descricao: "Para essas respostas antes é preciso entender que o jeito mais fácil de produzir um novo vírus é a partir de um já existente. Então, isso é o que o ganhador do prêmio Nobel de medicina Luc Montagnier e alguns outros cientistas acreditam que tenha acontecido nesse caso. Entretanto, outros pesquisadores como o da Nature através do estudo dos diversos tipos de Corona Vírus, compreendem esse novo como uma evolução por meio de seleção natural de outros vírus de animais até o atual de humanos.",
+                            fonte: "THE PROXIMAL ORIGIN OF SARS-CoV-2. Kristian G. Andersen, Andrew Rambaut, W. Ian Lipkin, Edward C. Holmes e Robert F. Garry Revista Isto é. Novo coronavírus foi fabricado acidentalmente em laboratório chinês, diz descobridor do HIV",
+                            imagem: "assets/quiz/qst15.png",
+                        },
+                        {
+                            pergunta: "Alguns remédios usados por portador de Diabetes Mellitus e Hipertensão Arterial podem agravar a Covid-19",
+                            resposta: "É uma incógnita, mas acredita-se que não",
+                            descricao: "As recomendações tanto da Sociedade Brasileira de Diabetes quanto da de Cardiologia são avaliar caso a caso para que o risco do descontrole da doença de base (diabetes/hipetensão) não seja superior aos de desenvolver COVID. Paratanto, a suspensão destes medicamentos não está indicada.",
+                            fonte: "Sociedades Brasileiras de Diabetes e de Cardiologia (SBD e SBC)",
+                            imagem: "assets/quiz/qst16.png",
+                        },
+                        {
+                            pergunta: "A cloroquina é a única medicação eficaz contra o coronavírus",
+                            resposta: "Falso",
+                            descricao: "Apesar de a OMS informar que ainda não existem medicamentos ou vacinas para a atual epidemia, muitos fármacos foram destaque para o combate da doença. Entre eles a Cloroquina; a Hidroxicloroquina; a Azitromicina; o Remdesivir; os Corticoides. Mas nenhum deles com eficácia comprovada nem uso autorizado pela OMS, por diversos fatores, desde maiores riscos que benefícios até piora dos quadros.",
+                            fonte: "Organização Mundial de Saúde (OMS), OS PRINCIPAIS REMÉDIOS E TRATAMENTOS EM TESTES CONTRA A COVID-19. Giulia granchi",
+                            imagem: "assets/quiz/qst17.png",
+                        },
+                        {
+                            pergunta: "A suplementação de vitamina C é eficaz na prevenção e tratamento da Covid-19",
+                            resposta: "Falso, mas há benefícios",
+                            descricao: "A Sociedade Brasileira de Nutrologia afirma que não só a vitamina C como também outros nutrientes podem compor um papel importante no aumento da imunidade, mas que de forma alguma atuam como tratamento da SARS-CoV 2. Portanto, a recomendação é de uma dieta balanceada e não exclusiva.",
+                            fonte: "Sociedade Brasileira de Nutrologia (SBRAN)",
+                            imagem: "assets/quiz/qst18.png",
+                        },
+                    ];
+                    this.indexPergunta = 0;
+                    this.esconderResposta = true;
+                    this.respostas = [];
+                    this.finalizou = false;
                 }
                 QuizComponent.prototype.ngOnInit = function () {
+                    this.perguntaAtual = this.perguntas[this.indexPergunta];
+                };
+                QuizComponent.prototype.mostraResposta = function (resposta) {
+                    this.respostas[this.indexPergunta] = resposta;
+                    this.esconderResposta = false;
+                };
+                QuizComponent.prototype.proxima = function () {
+                    this.finalizou = this.indexPergunta === this.perguntas.length - 1;
+                    if (this.finalizou)
+                        return;
+                    this.esconderResposta = true;
+                    this.indexPergunta++;
+                    this.perguntaAtual = this.perguntas[this.indexPergunta];
+                };
+                QuizComponent.prototype.onNoClick = function () {
+                    this.dialogRef.close(this.respostas);
                 };
                 return QuizComponent;
             }());
+            QuizComponent.ctorParameters = function () { return [
+                { type: _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"] },
+                { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] }
+            ]; };
             QuizComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
                 Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-                    selector: 'app-quiz',
+                    selector: "app-quiz",
                     template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./quiz.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/quiz/quiz.component.html")).default,
                     styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./quiz.component.less */ "./src/app/quiz/quiz.component.less")).default]
-                })
+                }),
+                tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]))
             ], QuizComponent);
             /***/ 
         }),
