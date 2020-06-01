@@ -341,7 +341,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"botoesFixos\">\n  <div (click)=\"abrirFatoOuFake()\">#Fake-or-fact</div>\n  <div>#recive-notice</div>\n  <div (click)=\"abrirQuiz()\">#Quiz</div>\n  <div (click)=\"voceTemCovid()\">#Do-I-have-covid?</div>\n  <div class=\"personalizacao\">\n    {{ question }}\n    <div (click)=\"responder(true)\" class=\"yes\"></div>\n    <div (click)=\"responder(false)\" class=\"no\"><hr /></div>\n  </div>\n  <div class=\"idioma\">\n    <img src=\"/assets/bandeiras.png\" />\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"botoesFixos\">\n  <div (click)=\"abrirFatoOuFake()\">#Fake-or-fact</div>\n  <div (click)=\"abrirReceberNoticias()\" >#receive-wherever</div>\n  <div (click)=\"abrirQuiz()\">#Quiz</div>\n  <div (click)=\"voceTemCovid()\">#Do-I-have-covid?</div>\n  <div class=\"personalizacao\">\n    {{ question }}\n    <div (click)=\"responder(true)\" class=\"yes\"></div>\n    <div (click)=\"responder(false)\" class=\"no\"><hr /></div>\n  </div>\n  <div class=\"idioma\">\n    <img src=\"/assets/bandeiras.png\" />\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -406,7 +406,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-botoes-fixo (atualizaNoticias)=\"atualizaNoticias($event)\"></app-botoes-fixo>\n<div class=\"primeiraParte red\">\n  <div class=\"siteEsquerda\">\n    <img src=\"/assets/corona_central_unlinking_fakenews.png\" />\n    <div class=\"caixa\">\n      <div class=\"top\">\n        <div class=\"totalStatus\">Total Status</div>\n      </div>\n      <div class=\"conteudo\">\n        <h3>Cases of Goiás</h3>\n        <div class=\"canvas\">\n        <canvas\n          baseChart\n          [data]=\"pieChartData\"\n          [labels]=\"pieChartLabels\"\n          [chartType]=\"pieChartType\"\n          [options]=\"pieChartOptions\"\n          [plugins]=\"pieChartPlugins\"\n          [legend]=\"pieChartLegend\"\n        >\n        </canvas>\n      </div>\n        <h4>Last update: {{dataUltimaAtualizacao}}</h4>\n      </div>\n    </div>\n  </div>\n  <div class=\"siteDireita\">\n    <div class=\"caixa\">\n      <div class=\"top\">\n        <div class=\"totalStatus\">Map of confirmed cases</div>\n      </div>\n      <div class=\"conteudo\">\n        <!-- <div id=\"map\" class=\"map\"></div> -->\n        <img src=\"/assets/mapa_br2-removebg-preview.png\" />\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"leitos red\">\n  <h3>Covid-19 beds occupation in hospitals</h3>\n  <div class=\"qtdeLeitos\">\n    <h4>{{ quantidadeTotal }} total beds</h4>\n    <h4>{{ quantidadeOcupados }} occupied beds</h4>\n    <h4>{{ quantidadeLivres }} free beds</h4>\n    <h4>{{ quantidadeConstrucao }} beds under construction</h4>\n  </div>\n  <div class=\"porcentagemLeitos\">\n    <h3>{{ textoQuantidadeTotal }}</h3>\n    <mat-progress-bar\n      mode=\"determinate\"\n      [value]=\"porcentagemLeitos\"\n      class=\"progressBar\"\n    >\n    </mat-progress-bar>\n    <div class=\"descricaoPorcentagem\">\n      <div class=\"porcentagem2\">\n        <div class=\"circulo\"></div>\n        <hr />\n        <h3>{{ textoQuantidadeLivres }}</h3>\n      </div>\n    </div>\n  </div>\n  <h4>Last update: {{dataUltimaAtualizacaoLeitos}}</h4>\n</div>\n\n<div class=\"noticias\">\n  <app-categorias\n    *ngFor=\"let item of categoriasLocais\"\n    [noticia]=\"item\"\n  ></app-categorias>\n</div>\n\n<div class=\"worldCases\">\n  <div class=\"porcentagemLeitos\">\n    <h3>{{ textoQuantidadeCasos }}</h3>\n    <mat-progress-bar\n      mode=\"determinate\"\n      [value]=\"porcentagemCasos\"\n      class=\"progressBar\"\n    >\n    </mat-progress-bar>\n    <div class=\"descricaoPorcentagem\">\n      <div class=\"porcentagem2\">\n        <div class=\"circulo\"></div>\n        <hr />\n        <h3>{{ textoQuantidadeObitos }}</h3>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"graficsWorld\">\n  <img src=\"/assets/graph.png\" />\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-botoes-fixo (atualizaNoticias)=\"atualizaNoticias($event)\"></app-botoes-fixo>\n<div class=\"primeiraParte red\">\n  <div class=\"siteEsquerda\">\n    <img src=\"/assets/corona_central_unlinking_fakenews.png\" />\n    <div class=\"caixa\">\n      <div class=\"top\">\n        <div class=\"totalStatus\">Total Status</div>\n      </div>\n      <div class=\"conteudo\">\n        <h3>Cases in Goiás</h3>\n        <div class=\"canvas\">\n        <canvas\n          baseChart\n          [data]=\"pieChartData\"\n          [labels]=\"pieChartLabels\"\n          [chartType]=\"pieChartType\"\n          [options]=\"pieChartOptions\"\n          [plugins]=\"pieChartPlugins\"\n          [legend]=\"pieChartLegend\"\n        >\n        </canvas>\n      </div>\n        <h4>Last update: {{dataUltimaAtualizacao}}</h4>\n      </div>\n    </div>\n  </div>\n  <div class=\"siteDireita\">\n    <div class=\"caixa\">\n      <div class=\"top\">\n        <div class=\"totalStatus\">Map of confirmed cases</div>\n      </div>\n      <div class=\"conteudo\">\n        <!-- <div id=\"map\" class=\"map\"></div> -->\n        <img src=\"/assets/mapa_br2-removebg-preview.png\" />\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"leitos red\">\n  <h3>Covid-19 beds occupation in hospitals</h3>\n  <div class=\"qtdeLeitos\">\n    <h4>{{ quantidadeTotal }} total beds</h4>\n    <h4>{{ quantidadeOcupados }} occupied beds</h4>\n    <h4>{{ quantidadeLivres }} free beds</h4>\n    <h4>{{ quantidadeConstrucao }} beds under construction</h4>\n  </div>\n  <div class=\"porcentagemLeitos\">\n    <h3>{{ textoQuantidadeTotal }}</h3>\n    <mat-progress-bar\n      mode=\"determinate\"\n      [value]=\"porcentagemLeitos\"\n      class=\"progressBar\"\n    >\n    </mat-progress-bar>\n    <div class=\"descricaoPorcentagem\">\n      <div class=\"porcentagem2\">\n        <div class=\"circulo\"></div>\n        <hr />\n        <h3>{{ textoQuantidadeLivres }}</h3>\n      </div>\n    </div>\n  </div>\n  <h4>Last update: {{dataUltimaAtualizacaoLeitos}}</h4>\n</div>\n\n<div class=\"noticias\">\n  <app-categorias\n    *ngFor=\"let item of categoriasLocais\"\n    [noticia]=\"item\"\n  ></app-categorias>\n</div>\n\n<div class=\"worldCases\">\n  <div class=\"porcentagemLeitos\">\n    <h3>{{ textoQuantidadeCasos }}</h3>\n    <mat-progress-bar\n      mode=\"determinate\"\n      [value]=\"porcentagemCasos\"\n      class=\"progressBar\"\n    >\n    </mat-progress-bar>\n    <div class=\"descricaoPorcentagem\">\n      <div class=\"porcentagem2\">\n        <div class=\"circulo\"></div>\n        <hr />\n        <h3>{{ textoQuantidadeObitos }}</h3>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"graficsWorld\">\n  <img src=\"/assets/graph.png\" />\n</div>\n");
 
 /***/ }),
 
@@ -446,6 +446,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ("<h1 mat-dialog-title>Quiz Corona Central</h1>\n<div class=\"perguntaResposta\" mat-dialog-content>\n  <div *ngIf=\"!finalizou\">\n    <div>Question: {{ perguntaAtual.pergunta }}</div>\n    <br />\n    <div class=\"resposta\" *ngIf=\"!esconderResposta\">\n      {{ perguntaAtual.resposta }}\n    </div>\n  </div>\n  <br />\n  <div *ngIf=\"esconderResposta\">\n    <button mat-button (click)=\"mostraResposta(true)\">TRUE</button>\n    <button mat-button (click)=\"mostraResposta(falso)\">FALSE</button>\n  </div>\n  <div *ngIf=\"!esconderResposta && !finalizou\">\n    <button mat-button (click)=\"proxima()\">NEXT</button>\n  </div>\n  <div *ngIf=\"!esconderResposta && finalizou\">\n    <div>\n      Thanks for answering our quiz, we hope you managed to get information by\n      having fun!\n    </div>\n    <button mat-button (click)=\"onNoClick()\">Close</button>\n  </div>\n</div>\n<div mat-dialog-actions>\n  <button mat-button (click)=\"onNoClick()\">Close</button>\n</div>\n");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/receba-noticias/receba-noticias.component.html":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/receba-noticias/receba-noticias.component.html ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 mat-dialog-title>Recive Wherever</h1>\n<div mat-dialog-content>\n  <div class=\"recive\">\n    <img src=\"/assets/whatsapp.jpeg\" />\n    <img src=\"/assets/googleplay.jpg\" />\n    <img src=\"/assets/email.png\" />\n    <img src=\"/assets/sms.jpeg\" />\n  </div>\n</div>\n<div mat-dialog-actions>\n  <button mat-button (click)=\"onNoClick()\">Fechar</button>\n</div>\n");
 
 /***/ }),
 
@@ -844,6 +857,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _categorias_categorias_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./categorias/categorias.component */ "./src/app/categorias/categorias.component.ts");
 /* harmony import */ var _quiz_quiz_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./quiz/quiz.component */ "./src/app/quiz/quiz.component.ts");
 /* harmony import */ var _botoes_fixo_botoes_fixo_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./botoes-fixo/botoes-fixo.component */ "./src/app/botoes-fixo/botoes-fixo.component.ts");
+/* harmony import */ var _receba_noticias_receba_noticias_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./receba-noticias/receba-noticias.component */ "./src/app/receba-noticias/receba-noticias.component.ts");
+
 
 
 
@@ -896,7 +911,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _noticias_noticias_component__WEBPACK_IMPORTED_MODULE_31__["NoticiasComponent"],
             _categorias_categorias_component__WEBPACK_IMPORTED_MODULE_32__["CategoriasComponent"],
             _quiz_quiz_component__WEBPACK_IMPORTED_MODULE_33__["QuizComponent"],
-            _botoes_fixo_botoes_fixo_component__WEBPACK_IMPORTED_MODULE_34__["BotoesFixoComponent"]
+            _botoes_fixo_botoes_fixo_component__WEBPACK_IMPORTED_MODULE_34__["BotoesFixoComponent"],
+            _receba_noticias_receba_noticias_component__WEBPACK_IMPORTED_MODULE_35__["RecebaNoticiasComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -938,7 +954,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _resultado_quiz_resultado_quiz_component__WEBPACK_IMPORTED_MODULE_25__["ResultadoQuizComponent"],
             _conheca_nossanave_conheca_nossanave_component__WEBPACK_IMPORTED_MODULE_27__["ConhecaNossanaveComponent"],
             _salvo_com_sucesso_salvo_com_sucesso_component__WEBPACK_IMPORTED_MODULE_28__["SalvoComSucessoComponent"],
-            _quiz_quiz_component__WEBPACK_IMPORTED_MODULE_33__["QuizComponent"]
+            _quiz_quiz_component__WEBPACK_IMPORTED_MODULE_33__["QuizComponent"],
+            _receba_noticias_receba_noticias_component__WEBPACK_IMPORTED_MODULE_35__["RecebaNoticiasComponent"]
         ],
     })
 ], AppModule);
@@ -975,6 +992,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
 /* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/es2015/index.js");
 /* harmony import */ var _quiz_quiz_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../quiz/quiz.component */ "./src/app/quiz/quiz.component.ts");
+/* harmony import */ var _receba_noticias_receba_noticias_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../receba-noticias/receba-noticias.component */ "./src/app/receba-noticias/receba-noticias.component.ts");
+
 
 
 
@@ -1010,6 +1029,11 @@ let BotoesFixoComponent = class BotoesFixoComponent {
             dialogRef.afterClosed().subscribe((result) => tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
                 this.db.collection("quiz").add(Object.assign({}, result, { dataInclusao: new Date() }));
             }));
+        });
+    }
+    abrirReceberNoticias() {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            const dialogRef = this.dialog.open(_receba_noticias_receba_noticias_component__WEBPACK_IMPORTED_MODULE_5__["RecebaNoticiasComponent"]);
         });
     }
 };
@@ -2049,6 +2073,62 @@ QuizComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]))
 ], QuizComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/receba-noticias/receba-noticias.component.less":
+/*!****************************************************************!*\
+  !*** ./src/app/receba-noticias/receba-noticias.component.less ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".recive {\n  display: flex;\n  justify-content: center;\n}\n.recive img {\n  width: 150px;\n  height: 150px;\n  padding: 20px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL25ldG8vbmFzYS9jb3ZpZC0xOS9zcmMvYXBwL3JlY2ViYS1ub3RpY2lhcy9yZWNlYmEtbm90aWNpYXMuY29tcG9uZW50Lmxlc3MiLCJzcmMvYXBwL3JlY2ViYS1ub3RpY2lhcy9yZWNlYmEtbm90aWNpYXMuY29tcG9uZW50Lmxlc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFBO0VBQ0EsdUJBQUE7QUNDRjtBREFFO0VBQ0UsWUFBQTtFQUNBLGFBQUE7RUFDQSxhQUFBO0FDRUoiLCJmaWxlIjoic3JjL2FwcC9yZWNlYmEtbm90aWNpYXMvcmVjZWJhLW5vdGljaWFzLmNvbXBvbmVudC5sZXNzIiwic291cmNlc0NvbnRlbnQiOlsiLnJlY2l2ZSB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAmIGltZyB7XG4gICAgd2lkdGg6IDE1MHB4O1xuICAgIGhlaWdodDogMTUwcHg7XG4gICAgcGFkZGluZzogMjBweDtcbiAgfVxufVxuIiwiLnJlY2l2ZSB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xufVxuLnJlY2l2ZSBpbWcge1xuICB3aWR0aDogMTUwcHg7XG4gIGhlaWdodDogMTUwcHg7XG4gIHBhZGRpbmc6IDIwcHg7XG59XG4iXX0= */");
+
+/***/ }),
+
+/***/ "./src/app/receba-noticias/receba-noticias.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/receba-noticias/receba-noticias.component.ts ***!
+  \**************************************************************/
+/*! exports provided: RecebaNoticiasComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RecebaNoticiasComponent", function() { return RecebaNoticiasComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+
+
+
+let RecebaNoticiasComponent = class RecebaNoticiasComponent {
+    constructor(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        this.data = data;
+    }
+    ngOnInit() { }
+    onNoClick() {
+        this.dialogRef.close();
+    }
+};
+RecebaNoticiasComponent.ctorParameters = () => [
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialogRef"] },
+    { type: undefined, decorators: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"], args: [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"],] }] }
+];
+RecebaNoticiasComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: "app-receba-noticias",
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./receba-noticias.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/receba-noticias/receba-noticias.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./receba-noticias.component.less */ "./src/app/receba-noticias/receba-noticias.component.less")).default]
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](1, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_2__["MAT_DIALOG_DATA"]))
+], RecebaNoticiasComponent);
 
 
 
