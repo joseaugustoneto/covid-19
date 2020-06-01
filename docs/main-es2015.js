@@ -328,7 +328,20 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"botoesFixos\">\n  <div (click)=\"abrirFatoOuFake()\">#Fato-ou-Fake</div>\n  <div (click)=\"abrirQuiz()\">#Quizz</div>\n  <div>#Estou-com-covid?</div>\n  <div>Você possui filhos?</div>\n</div>\n<div class=\"header\">\n  <img src=\"/assets/head_logo.png\">\n</div>\n<div class=\"conteudo\">\n  <router-outlet></router-outlet>\n</div>\n\n<div class=\"rodape\">\n  <div class=\"direitos\">\n    © 2020 Central Corona. Todos os direitos reservados.\n  </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"header\">\n  <img src=\"/assets/head_logo.png\">\n</div>\n<div class=\"conteudo\">\n  <router-outlet></router-outlet>\n</div>\n\n<div class=\"rodape\">\n  <div class=\"direitos\">\n    © 2020 Corona Central. All Rights Reserved\n  </div>\n</div>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/botoes-fixo/botoes-fixo.component.html":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/botoes-fixo/botoes-fixo.component.html ***!
+  \**********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"botoesFixos\">\n  <div (click)=\"abrirFatoOuFake()\">#Fake-or-fact</div>\n  <div>#recive-notice</div>\n  <div (click)=\"abrirQuiz()\">#Quiz</div>\n  <div (click)=\"voceTemCovid()\">#Do-I-have-covid?</div>\n  <div class=\"personalizacao\">\n    {{ question }}\n    <div (click)=\"responder(true)\" class=\"yes\"></div>\n    <div (click)=\"responder(false)\" class=\"no\"><hr /></div>\n  </div>\n  <div class=\"idioma\">\n    <img src=\"/assets/bandeiras.png\" />\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -393,7 +406,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"primeiraParte red\">\n  <div class=\"siteEsquerda\">\n    <img src=\"/assets/corona_central_unlinking_fakenews.png\" />\n    <div class=\"caixa\">\n      <div class=\"top\">\n        <div class=\"totalStatus\">Total Status</div>\n      </div>\n      <div class=\"conteudo\">\n        <h3>Cases of Goiás</h3>\n        <div class=\"canvas\">\n        <canvas\n          baseChart\n          [data]=\"pieChartData\"\n          [labels]=\"pieChartLabels\"\n          [chartType]=\"pieChartType\"\n          [options]=\"pieChartOptions\"\n          [plugins]=\"pieChartPlugins\"\n          [legend]=\"pieChartLegend\"\n        >\n        </canvas>\n      </div>\n        <h4>Data ultima atualização: {{dataUltimaAtualizacao}}</h4>\n      </div>\n    </div>\n  </div>\n  <div class=\"siteDireita\">\n    <div class=\"caixa\">\n      <div class=\"top\">\n        <div class=\"totalStatus\">Map of confirmed cases</div>\n      </div>\n      <div class=\"conteudo\">\n        <!-- <div id=\"map\" class=\"map\"></div> -->\n        <img src=\"/assets/mapa_br2-removebg-preview.png\" />\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"leitos red\">\n  <h3>Ocupação de Leitos Covid-19 nos hospitais</h3>\n  <div class=\"qtdeLeitos\">\n    <h4>{{ quantidadeTotal }} total de leitos</h4>\n    <h4>{{ quantidadeOcupados }} leitos ocupados</h4>\n    <h4>{{ quantidadeLivres }} leitos livres</h4>\n    <h4>{{ quantidadeConstrucao }} leitos em construção</h4>\n  </div>\n  <div class=\"porcentagemLeitos\">\n    <h3>{{ textoQuantidadeTotal }}</h3>\n    <mat-progress-bar\n      mode=\"determinate\"\n      [value]=\"porcentagemLeitos\"\n      class=\"progressBar\"\n    >\n    </mat-progress-bar>\n    <div class=\"descricaoPorcentagem\">\n      <div class=\"porcentagem2\">\n        <div class=\"circulo\"></div>\n        <hr />\n        <h3>{{ textoQuantidadeLivres }}</h3>\n      </div>\n    </div>\n  </div>\n  <h4>Data ultima atualização: {{dataUltimaAtualizacaoLeitos}}</h4>\n</div>\n\n<div class=\"noticias\">\n  <app-categorias\n    *ngFor=\"let item of categoriasLocais\"\n    [noticia]=\"item\"\n  ></app-categorias>\n</div>\n\n<div class=\"worldCases\">\n  <div class=\"porcentagemLeitos\">\n    <h3>{{ textoQuantidadeCasos }}</h3>\n    <mat-progress-bar\n      mode=\"determinate\"\n      [value]=\"porcentagemCasos\"\n      class=\"progressBar\"\n    >\n    </mat-progress-bar>\n    <div class=\"descricaoPorcentagem\">\n      <div class=\"porcentagem2\">\n        <div class=\"circulo\"></div>\n        <hr />\n        <h3>{{ textoQuantidadeObitos }}</h3>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"graficsWorld\">\n  <img src=\"/assets/graph.png\" />\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-botoes-fixo (atualizaNoticias)=\"atualizaNoticias($event)\"></app-botoes-fixo>\n<div class=\"primeiraParte red\">\n  <div class=\"siteEsquerda\">\n    <img src=\"/assets/corona_central_unlinking_fakenews.png\" />\n    <div class=\"caixa\">\n      <div class=\"top\">\n        <div class=\"totalStatus\">Total Status</div>\n      </div>\n      <div class=\"conteudo\">\n        <h3>Cases of Goiás</h3>\n        <div class=\"canvas\">\n        <canvas\n          baseChart\n          [data]=\"pieChartData\"\n          [labels]=\"pieChartLabels\"\n          [chartType]=\"pieChartType\"\n          [options]=\"pieChartOptions\"\n          [plugins]=\"pieChartPlugins\"\n          [legend]=\"pieChartLegend\"\n        >\n        </canvas>\n      </div>\n        <h4>Last update: {{dataUltimaAtualizacao}}</h4>\n      </div>\n    </div>\n  </div>\n  <div class=\"siteDireita\">\n    <div class=\"caixa\">\n      <div class=\"top\">\n        <div class=\"totalStatus\">Map of confirmed cases</div>\n      </div>\n      <div class=\"conteudo\">\n        <!-- <div id=\"map\" class=\"map\"></div> -->\n        <img src=\"/assets/mapa_br2-removebg-preview.png\" />\n      </div>\n    </div>\n  </div>\n</div>\n<div class=\"leitos red\">\n  <h3>Covid-19 beds occupation in hospitals</h3>\n  <div class=\"qtdeLeitos\">\n    <h4>{{ quantidadeTotal }} total beds</h4>\n    <h4>{{ quantidadeOcupados }} occupied beds</h4>\n    <h4>{{ quantidadeLivres }} free beds</h4>\n    <h4>{{ quantidadeConstrucao }} beds under construction</h4>\n  </div>\n  <div class=\"porcentagemLeitos\">\n    <h3>{{ textoQuantidadeTotal }}</h3>\n    <mat-progress-bar\n      mode=\"determinate\"\n      [value]=\"porcentagemLeitos\"\n      class=\"progressBar\"\n    >\n    </mat-progress-bar>\n    <div class=\"descricaoPorcentagem\">\n      <div class=\"porcentagem2\">\n        <div class=\"circulo\"></div>\n        <hr />\n        <h3>{{ textoQuantidadeLivres }}</h3>\n      </div>\n    </div>\n  </div>\n  <h4>Last update: {{dataUltimaAtualizacaoLeitos}}</h4>\n</div>\n\n<div class=\"noticias\">\n  <app-categorias\n    *ngFor=\"let item of categoriasLocais\"\n    [noticia]=\"item\"\n  ></app-categorias>\n</div>\n\n<div class=\"worldCases\">\n  <div class=\"porcentagemLeitos\">\n    <h3>{{ textoQuantidadeCasos }}</h3>\n    <mat-progress-bar\n      mode=\"determinate\"\n      [value]=\"porcentagemCasos\"\n      class=\"progressBar\"\n    >\n    </mat-progress-bar>\n    <div class=\"descricaoPorcentagem\">\n      <div class=\"porcentagem2\">\n        <div class=\"circulo\"></div>\n        <hr />\n        <h3>{{ textoQuantidadeObitos }}</h3>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"graficsWorld\">\n  <img src=\"/assets/graph.png\" />\n</div>\n");
 
 /***/ }),
 
@@ -432,7 +445,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 mat-dialog-title>Quizz Corona Central</h1>\n<div class=\"perguntaResposta\" mat-dialog-content>\n  <div *ngIf=\"!finalizou\">\n    <div>Pergunta: {{ perguntaAtual.pergunta }}</div>\n    <br />\n    <div class=\"resposta\" *ngIf=\"!esconderResposta\">\n      {{ perguntaAtual.resposta }}\n    </div>\n  </div>\n  <br />\n  <div *ngIf=\"esconderResposta\">\n    <button mat-button (click)=\"mostraResposta(true)\">VERDADEIRO</button>\n    <button mat-button (click)=\"mostraResposta(falso)\">FALSO</button>\n  </div>\n  <div *ngIf=\"!esconderResposta && !finalizou\">\n    <button mat-button (click)=\"proxima()\">PRÓXIMA</button>\n  </div>\n  <div *ngIf=\"!esconderResposta && finalizou\">\n    <div>\n      Muito Obrigado por responder nosso quizz, esperamos que você tenha\n      conseguido se informar melhor se divertindo!\n    </div>\n    <button mat-button (click)=\"onNoClick()\">Fechar</button>\n  </div>\n</div>\n<div mat-dialog-actions>\n  <button mat-button (click)=\"onNoClick()\">Fechar</button>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 mat-dialog-title>Quiz Corona Central</h1>\n<div class=\"perguntaResposta\" mat-dialog-content>\n  <div *ngIf=\"!finalizou\">\n    <div>Question: {{ perguntaAtual.pergunta }}</div>\n    <br />\n    <div class=\"resposta\" *ngIf=\"!esconderResposta\">\n      {{ perguntaAtual.resposta }}\n    </div>\n  </div>\n  <br />\n  <div *ngIf=\"esconderResposta\">\n    <button mat-button (click)=\"mostraResposta(true)\">TRUE</button>\n    <button mat-button (click)=\"mostraResposta(falso)\">FALSE</button>\n  </div>\n  <div *ngIf=\"!esconderResposta && !finalizou\">\n    <button mat-button (click)=\"proxima()\">NEXT</button>\n  </div>\n  <div *ngIf=\"!esconderResposta && finalizou\">\n    <div>\n      Thanks for answering our quiz, we hope you managed to get information by\n      having fun!\n    </div>\n    <button mat-button (click)=\"onNoClick()\">Close</button>\n  </div>\n</div>\n<div mat-dialog-actions>\n  <button mat-button (click)=\"onNoClick()\">Close</button>\n</div>\n");
 
 /***/ }),
 
@@ -753,7 +766,7 @@ AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".botoesFixos {\n  height: 70px;\n  position: fixed;\n  width: 100%;\n  z-index: 1;\n  background-color: white;\n  display: flex;\n  justify-content: space-evenly;\n  align-items: center;\n  top: 0px;\n}\n.botoesFixos div {\n  cursor: pointer;\n}\n.header {\n  height: 100px;\n  background-color: white;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin-top: 70px;\n}\n@media only screen and (max-width: 780px) {\n  .header {\n    height: 70px;\n  }\n}\n@media only screen and (max-width: 440px) {\n  .header {\n    height: 59px;\n  }\n}\n.header img {\n  height: 153%;\n  top: 30px;\n  position: relative;\n}\n@media only screen and (max-width: 780px) {\n  .header img {\n    height: 145%;\n    top: 22px;\n  }\n}\n@media only screen and (max-width: 440px) {\n  .header img {\n    height: 120%;\n    top: 22px;\n  }\n}\n.rodape {\n  background-color: #791c13;\n}\n.rodape .direitos {\n  color: white;\n  text-align: center;\n  height: 30px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL25ldG8vbmFzYS9jb3ZpZC0xOS9zcmMvYXBwL2FwcC5jb21wb25lbnQubGVzcyIsInNyYy9hcHAvYXBwLmNvbXBvbmVudC5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUdBO0VBQ0UsWUFBQTtFQUNBLGVBQUE7RUFDQSxXQUFBO0VBQ0EsVUFBQTtFQUNBLHVCQUFBO0VBQ0EsYUFBQTtFQUNBLDZCQUFBO0VBQ0EsbUJBQUE7RUFDQSxRQUFBO0FDRkY7QURHRTtFQUNFLGVBQUE7QUNESjtBREtBO0VBQ0UsYUFBQTtFQUNBLHVCQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxnQkFBQTtBQ0hGO0FES0U7RUFBQTtJQUNFLFlBQUE7RUNGRjtBQUNGO0FER0U7RUFBQTtJQUNFLFlBQUE7RUNBRjtBQUNGO0FEQ0U7RUFDRSxZQUFBO0VBQ0EsU0FBQTtFQUNBLGtCQUFBO0FDQ0o7QURDSTtFQUFBO0lBQ0UsWUFBQTtJQUNBLFNBQUE7RUNFSjtBQUNGO0FEQUk7RUFBQTtJQUNFLFlBQUE7SUFDQSxTQUFBO0VDR0o7QUFDRjtBRENBO0VBQ0UseUJBQUE7QUNDRjtBREFFO0VBQ0UsWUFBQTtFQUNBLGtCQUFBO0VBQ0EsWUFBQTtBQ0VKIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5sZXNzIiwic291cmNlc0NvbnRlbnQiOlsiQGNvclByaW5jaXBhbDogI2UzMDYxMztcbkBjb3JFc2N1cmE6ICM3OTFjMTM7XG5AY29yU2VndW5kYXJpYTogd2hpdGU7XG4uYm90b2VzRml4b3N7XG4gIGhlaWdodDogNzBweDtcbiAgcG9zaXRpb246IGZpeGVkO1xuICB3aWR0aDogMTAwJTtcbiAgei1pbmRleDogMTtcbiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtZXZlbmx5O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICB0b3A6IDBweDtcbiAgJiBkaXYge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgfVxufVxuXG4uaGVhZGVyIHtcbiAgaGVpZ2h0OiAxMDBweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogQGNvclNlZ3VuZGFyaWE7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBtYXJnaW4tdG9wOiA3MHB4O1xuXG4gIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzgwcHgpIHtcbiAgICBoZWlnaHQ6IDcwcHg7XG4gIH1cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA0NDBweCkge1xuICAgIGhlaWdodDogNTlweDtcbiAgfVxuICAmIGltZyB7XG4gICAgaGVpZ2h0OiAxNTMlO1xuICAgIHRvcDogMzBweDtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG5cbiAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc4MHB4KSB7XG4gICAgICBoZWlnaHQ6IDE0NSU7XG4gICAgICB0b3A6IDIycHg7XG4gICAgfVxuXG4gICAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA0NDBweCkge1xuICAgICAgaGVpZ2h0OiAxMjAlO1xuICAgICAgdG9wOiAyMnB4O1xuICAgIH1cbiAgfVxufVxuXG4ucm9kYXBlIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogQGNvckVzY3VyYTtcbiAgJiAuZGlyZWl0b3Mge1xuICAgIGNvbG9yOiBAY29yU2VndW5kYXJpYTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgaGVpZ2h0OiAzMHB4O1xuICB9XG59XG4iLCIuYm90b2VzRml4b3Mge1xuICBoZWlnaHQ6IDcwcHg7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgd2lkdGg6IDEwMCU7XG4gIHotaW5kZXg6IDE7XG4gIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWV2ZW5seTtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgdG9wOiAwcHg7XG59XG4uYm90b2VzRml4b3MgZGl2IHtcbiAgY3Vyc29yOiBwb2ludGVyO1xufVxuLmhlYWRlciB7XG4gIGhlaWdodDogMTAwcHg7XG4gIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgbWFyZ2luLXRvcDogNzBweDtcbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzgwcHgpIHtcbiAgLmhlYWRlciB7XG4gICAgaGVpZ2h0OiA3MHB4O1xuICB9XG59XG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDQ0MHB4KSB7XG4gIC5oZWFkZXIge1xuICAgIGhlaWdodDogNTlweDtcbiAgfVxufVxuLmhlYWRlciBpbWcge1xuICBoZWlnaHQ6IDE1MyU7XG4gIHRvcDogMzBweDtcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xufVxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3ODBweCkge1xuICAuaGVhZGVyIGltZyB7XG4gICAgaGVpZ2h0OiAxNDUlO1xuICAgIHRvcDogMjJweDtcbiAgfVxufVxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA0NDBweCkge1xuICAuaGVhZGVyIGltZyB7XG4gICAgaGVpZ2h0OiAxMjAlO1xuICAgIHRvcDogMjJweDtcbiAgfVxufVxuLnJvZGFwZSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICM3OTFjMTM7XG59XG4ucm9kYXBlIC5kaXJlaXRvcyB7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBoZWlnaHQ6IDMwcHg7XG59XG4iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".header {\n  height: 100px;\n  background-color: white;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin-top: 70px;\n}\n@media only screen and (max-width: 780px) {\n  .header {\n    height: 70px;\n  }\n}\n@media only screen and (max-width: 440px) {\n  .header {\n    height: 59px;\n  }\n}\n.header img {\n  height: 153%;\n  top: 30px;\n  position: relative;\n}\n@media only screen and (max-width: 780px) {\n  .header img {\n    height: 145%;\n    top: 22px;\n  }\n}\n@media only screen and (max-width: 440px) {\n  .header img {\n    height: 120%;\n    top: 22px;\n  }\n}\n.rodape {\n  background-color: #851104;\n}\n.rodape .direitos {\n  color: white;\n  text-align: center;\n  height: 30px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL25ldG8vbmFzYS9jb3ZpZC0xOS9zcmMvYXBwL2FwcC5jb21wb25lbnQubGVzcyIsInNyYy9hcHAvYXBwLmNvbXBvbmVudC5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUlBO0VBQ0UsYUFBQTtFQUNBLHVCQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7RUFDQSxnQkFBQTtBQ0hGO0FES0U7RUFBQTtJQUNFLFlBQUE7RUNGRjtBQUNGO0FER0U7RUFBQTtJQUNFLFlBQUE7RUNBRjtBQUNGO0FEQ0U7RUFDRSxZQUFBO0VBQ0EsU0FBQTtFQUNBLGtCQUFBO0FDQ0o7QURDSTtFQUFBO0lBQ0UsWUFBQTtJQUNBLFNBQUE7RUNFSjtBQUNGO0FEQUk7RUFBQTtJQUNFLFlBQUE7SUFDQSxTQUFBO0VDR0o7QUFDRjtBRENBO0VBQ0UseUJBQUE7QUNDRjtBREFFO0VBQ0UsWUFBQTtFQUNBLGtCQUFBO0VBQ0EsWUFBQTtBQ0VKIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5sZXNzIiwic291cmNlc0NvbnRlbnQiOlsiQGNvclByaW5jaXBhbDogI2UzMDYxMztcbkBjb3JFc2N1cmE6ICM4NTExMDQ7XG5AY29yU2VndW5kYXJpYTogd2hpdGU7XG5cbi5oZWFkZXIge1xuICBoZWlnaHQ6IDEwMHB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBAY29yU2VndW5kYXJpYTtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIG1hcmdpbi10b3A6IDcwcHg7XG5cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA3ODBweCkge1xuICAgIGhlaWdodDogNzBweDtcbiAgfVxuICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDQ0MHB4KSB7XG4gICAgaGVpZ2h0OiA1OXB4O1xuICB9XG4gICYgaW1nIHtcbiAgICBoZWlnaHQ6IDE1MyU7XG4gICAgdG9wOiAzMHB4O1xuICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcblxuICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzgwcHgpIHtcbiAgICAgIGhlaWdodDogMTQ1JTtcbiAgICAgIHRvcDogMjJweDtcbiAgICB9XG5cbiAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDQ0MHB4KSB7XG4gICAgICBoZWlnaHQ6IDEyMCU7XG4gICAgICB0b3A6IDIycHg7XG4gICAgfVxuICB9XG59XG5cbi5yb2RhcGUge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBAY29yRXNjdXJhO1xuICAmIC5kaXJlaXRvcyB7XG4gICAgY29sb3I6IEBjb3JTZWd1bmRhcmlhO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBoZWlnaHQ6IDMwcHg7XG4gIH1cbn1cbiIsIi5oZWFkZXIge1xuICBoZWlnaHQ6IDEwMHB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIG1hcmdpbi10b3A6IDcwcHg7XG59XG5AbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDc4MHB4KSB7XG4gIC5oZWFkZXIge1xuICAgIGhlaWdodDogNzBweDtcbiAgfVxufVxuQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA0NDBweCkge1xuICAuaGVhZGVyIHtcbiAgICBoZWlnaHQ6IDU5cHg7XG4gIH1cbn1cbi5oZWFkZXIgaW1nIHtcbiAgaGVpZ2h0OiAxNTMlO1xuICB0b3A6IDMwcHg7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzgwcHgpIHtcbiAgLmhlYWRlciBpbWcge1xuICAgIGhlaWdodDogMTQ1JTtcbiAgICB0b3A6IDIycHg7XG4gIH1cbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNDQwcHgpIHtcbiAgLmhlYWRlciBpbWcge1xuICAgIGhlaWdodDogMTIwJTtcbiAgICB0b3A6IDIycHg7XG4gIH1cbn1cbi5yb2RhcGUge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjODUxMTA0O1xufVxuLnJvZGFwZSAuZGlyZWl0b3Mge1xuICBjb2xvcjogd2hpdGU7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgaGVpZ2h0OiAzMHB4O1xufVxuIl19 */");
 
 /***/ }),
 
@@ -769,39 +782,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
-/* harmony import */ var _quiz_quiz_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./quiz/quiz.component */ "./src/app/quiz/quiz.component.ts");
-/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/es2015/index.js");
-
-
-
 
 
 let AppComponent = class AppComponent {
-    constructor(dialog, db) {
-        this.dialog = dialog;
-        this.db = db;
-        this.atualizaNoticias = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
-    }
-    abrirFatoOuFake() {
-        window.open("https://www.saude.gov.br/component/tags/tag/novo-coronavirus-fake-news?limitstart=0", "_blank");
-    }
-    abrirQuiz() {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            const dialogRef = this.dialog.open(_quiz_quiz_component__WEBPACK_IMPORTED_MODULE_3__["QuizComponent"]);
-            dialogRef.afterClosed().subscribe((result) => tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-                this.db.collection("quiz").add(Object.assign({}, result, { dataInclusao: new Date() }));
-            }));
-        });
-    }
+    constructor() { }
 };
-AppComponent.ctorParameters = () => [
-    { type: _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialog"] },
-    { type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_4__["AngularFirestore"] }
-];
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
-], AppComponent.prototype, "atualizaNoticias", void 0);
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: "app-root",
@@ -858,6 +843,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _noticias_noticias_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./noticias/noticias.component */ "./src/app/noticias/noticias.component.ts");
 /* harmony import */ var _categorias_categorias_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./categorias/categorias.component */ "./src/app/categorias/categorias.component.ts");
 /* harmony import */ var _quiz_quiz_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./quiz/quiz.component */ "./src/app/quiz/quiz.component.ts");
+/* harmony import */ var _botoes_fixo_botoes_fixo_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./botoes-fixo/botoes-fixo.component */ "./src/app/botoes-fixo/botoes-fixo.component.ts");
+
 
 
 
@@ -908,7 +895,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _salvo_com_sucesso_salvo_com_sucesso_component__WEBPACK_IMPORTED_MODULE_28__["SalvoComSucessoComponent"],
             _noticias_noticias_component__WEBPACK_IMPORTED_MODULE_31__["NoticiasComponent"],
             _categorias_categorias_component__WEBPACK_IMPORTED_MODULE_32__["CategoriasComponent"],
-            _quiz_quiz_component__WEBPACK_IMPORTED_MODULE_33__["QuizComponent"]
+            _quiz_quiz_component__WEBPACK_IMPORTED_MODULE_33__["QuizComponent"],
+            _botoes_fixo_botoes_fixo_component__WEBPACK_IMPORTED_MODULE_34__["BotoesFixoComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -959,6 +947,91 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/botoes-fixo/botoes-fixo.component.less":
+/*!********************************************************!*\
+  !*** ./src/app/botoes-fixo/botoes-fixo.component.less ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".botoesFixos {\n  height: 70px;\n  position: fixed;\n  width: 100%;\n  z-index: 1;\n  background-color: white;\n  display: flex;\n  justify-content: space-evenly;\n  align-items: center;\n  top: 0px;\n}\n.botoesFixos > div {\n  cursor: pointer;\n  background-color: #e21912;\n  width: 100%;\n  padding: 5px;\n  margin: 10px;\n  color: white;\n  border-radius: 5px;\n  font-weight: bold;\n  display: flex;\n  justify-content: space-evenly;\n  align-items: center;\n}\n.botoesFixos > div:active {\n  background-color: #6f6e6e;\n}\n.botoesFixos > div div {\n  border: 3px solid white;\n  width: 16px;\n  height: 16px;\n  border-radius: 100%;\n}\n.botoesFixos > div div.yes:hover {\n  background-color: green;\n}\n.botoesFixos > div div.no:hover {\n  background-color: red;\n}\n.botoesFixos .personalizacao {\n  background-color: #851104;\n}\n.botoesFixos .personalizacao:active {\n  background-color: #251a42;\n}\n.botoesFixos .personalizacao .no {\n  position: relative;\n}\n.botoesFixos .personalizacao .no hr {\n  transform: rotate(-55deg);\n  width: 15px;\n  border: 2px solid white;\n  position: absolute;\n  top: -2px;\n  left: -1px;\n}\n.botoesFixos .idioma {\n  position: absolute;\n  background-color: unset;\n  top: 78px;\n  left: -32px;\n  width: 84px;\n  height: 50px;\n}\n.botoesFixos .idioma img {\n  width: 100%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL25ldG8vbmFzYS9jb3ZpZC0xOS9zcmMvYXBwL2JvdG9lcy1maXhvL2JvdG9lcy1maXhvLmNvbXBvbmVudC5sZXNzIiwic3JjL2FwcC9ib3RvZXMtZml4by9ib3RvZXMtZml4by5jb21wb25lbnQubGVzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFHQTtFQUNFLFlBQUE7RUFDQSxlQUFBO0VBQ0EsV0FBQTtFQUNBLFVBQUE7RUFDQSx1QkFBQTtFQUNBLGFBQUE7RUFDQSw2QkFBQTtFQUNBLG1CQUFBO0VBQ0EsUUFBQTtBQ0ZGO0FER0U7RUFDRSxlQUFBO0VBQ0EseUJBQUE7RUFDQSxXQUFBO0VBQ0EsWUFBQTtFQUNBLFlBQUE7RUFDQSxZQUFBO0VBQ0Esa0JBQUE7RUFDQSxpQkFBQTtFQUNBLGFBQUE7RUFDQSw2QkFBQTtFQUNBLG1CQUFBO0FDREo7QURFSTtFQUNFLHlCQUFBO0FDQU47QURHSTtFQUNFLHVCQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7RUFDQSxtQkFBQTtBQ0ROO0FERU07RUFDRSx1QkFBQTtBQ0FSO0FERU07RUFDRSxxQkFBQTtBQ0FSO0FESUU7RUFDRSx5QkFBQTtBQ0ZKO0FESUk7RUFDRSx5QkFBQTtBQ0ZOO0FESUk7RUFDRSxrQkFBQTtBQ0ZOO0FER007RUFDRSx5QkFBQTtFQUNBLFdBQUE7RUFDQSx1QkFBQTtFQUNBLGtCQUFBO0VBQ0EsU0FBQTtFQUNBLFVBQUE7QUNEUjtBRE1FO0VBQ0Usa0JBQUE7RUFDQSx1QkFBQTtFQUNBLFNBQUE7RUFDQSxXQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7QUNKSjtBRE1JO0VBQ0UsV0FBQTtBQ0pOIiwiZmlsZSI6InNyYy9hcHAvYm90b2VzLWZpeG8vYm90b2VzLWZpeG8uY29tcG9uZW50Lmxlc3MiLCJzb3VyY2VzQ29udGVudCI6WyJAY29yUHJpbmNpcGFsOiAjZTMwNjEzO1xuQGNvckVzY3VyYTogIzg1MTEwNDtcbkBjb3JTZWd1bmRhcmlhOiB3aGl0ZTtcbi5ib3RvZXNGaXhvcyB7XG4gIGhlaWdodDogNzBweDtcbiAgcG9zaXRpb246IGZpeGVkO1xuICB3aWR0aDogMTAwJTtcbiAgei1pbmRleDogMTtcbiAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtZXZlbmx5O1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICB0b3A6IDBweDtcbiAgJiA+IGRpdiB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNlMjE5MTI7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgcGFkZGluZzogNXB4O1xuICAgIG1hcmdpbjogMTBweDtcbiAgICBjb2xvcjogd2hpdGU7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1ldmVubHk7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAmOmFjdGl2ZSB7XG4gICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjNmY2ZTZlO1xuICAgIH1cblxuICAgICYgZGl2IHtcbiAgICAgIGJvcmRlcjogM3B4IHNvbGlkIHdoaXRlO1xuICAgICAgd2lkdGg6IDE2cHg7XG4gICAgICBoZWlnaHQ6IDE2cHg7XG4gICAgICBib3JkZXItcmFkaXVzOiAxMDAlO1xuICAgICAgJi55ZXM6aG92ZXIge1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiBncmVlbjtcbiAgICAgIH1cbiAgICAgICYubm86aG92ZXIge1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZWQ7XG4gICAgICB9XG4gICAgfVxuICB9XG4gICYgLnBlcnNvbmFsaXphY2FvIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiBAY29yRXNjdXJhO1xuXG4gICAgJjphY3RpdmUge1xuICAgICAgYmFja2dyb3VuZC1jb2xvcjogIzI1MWE0MjtcbiAgICB9XG4gICAgJiAubm8ge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgJiBociB7XG4gICAgICAgIHRyYW5zZm9ybTogcm90YXRlKC01NWRlZyk7XG4gICAgICAgIHdpZHRoOiAxNXB4O1xuICAgICAgICBib3JkZXI6IDJweCBzb2xpZCB3aGl0ZTtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB0b3A6IC0ycHg7XG4gICAgICAgIGxlZnQ6IC0xcHg7XG4gICAgICB9XG4gICAgfVxuICB9XG5cbiAgJiAuaWRpb21hIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdW5zZXQ7XG4gICAgdG9wOiA3OHB4O1xuICAgIGxlZnQ6IC0zMnB4O1xuICAgIHdpZHRoOiA4NHB4O1xuICAgIGhlaWdodDogNTBweDtcblxuICAgICYgaW1nIHtcbiAgICAgIHdpZHRoOiAxMDAlO1xuICAgIH1cbiAgfVxufVxuIiwiLmJvdG9lc0ZpeG9zIHtcbiAgaGVpZ2h0OiA3MHB4O1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIHdpZHRoOiAxMDAlO1xuICB6LWluZGV4OiAxO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1ldmVubHk7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIHRvcDogMHB4O1xufVxuLmJvdG9lc0ZpeG9zID4gZGl2IHtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZTIxOTEyO1xuICB3aWR0aDogMTAwJTtcbiAgcGFkZGluZzogNXB4O1xuICBtYXJnaW46IDEwcHg7XG4gIGNvbG9yOiB3aGl0ZTtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBmb250LXdlaWdodDogYm9sZDtcbiAgZGlzcGxheTogZmxleDtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1ldmVubHk7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG4uYm90b2VzRml4b3MgPiBkaXY6YWN0aXZlIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogIzZmNmU2ZTtcbn1cbi5ib3RvZXNGaXhvcyA+IGRpdiBkaXYge1xuICBib3JkZXI6IDNweCBzb2xpZCB3aGl0ZTtcbiAgd2lkdGg6IDE2cHg7XG4gIGhlaWdodDogMTZweDtcbiAgYm9yZGVyLXJhZGl1czogMTAwJTtcbn1cbi5ib3RvZXNGaXhvcyA+IGRpdiBkaXYueWVzOmhvdmVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogZ3JlZW47XG59XG4uYm90b2VzRml4b3MgPiBkaXYgZGl2Lm5vOmhvdmVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmVkO1xufVxuLmJvdG9lc0ZpeG9zIC5wZXJzb25hbGl6YWNhbyB7XG4gIGJhY2tncm91bmQtY29sb3I6ICM4NTExMDQ7XG59XG4uYm90b2VzRml4b3MgLnBlcnNvbmFsaXphY2FvOmFjdGl2ZSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMyNTFhNDI7XG59XG4uYm90b2VzRml4b3MgLnBlcnNvbmFsaXphY2FvIC5ubyB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cbi5ib3RvZXNGaXhvcyAucGVyc29uYWxpemFjYW8gLm5vIGhyIHtcbiAgdHJhbnNmb3JtOiByb3RhdGUoLTU1ZGVnKTtcbiAgd2lkdGg6IDE1cHg7XG4gIGJvcmRlcjogMnB4IHNvbGlkIHdoaXRlO1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogLTJweDtcbiAgbGVmdDogLTFweDtcbn1cbi5ib3RvZXNGaXhvcyAuaWRpb21hIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB1bnNldDtcbiAgdG9wOiA3OHB4O1xuICBsZWZ0OiAtMzJweDtcbiAgd2lkdGg6IDg0cHg7XG4gIGhlaWdodDogNTBweDtcbn1cbi5ib3RvZXNGaXhvcyAuaWRpb21hIGltZyB7XG4gIHdpZHRoOiAxMDAlO1xufVxuIl19 */");
+
+/***/ }),
+
+/***/ "./src/app/botoes-fixo/botoes-fixo.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/botoes-fixo/botoes-fixo.component.ts ***!
+  \******************************************************/
+/*! exports provided: BotoesFixoComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BotoesFixoComponent", function() { return BotoesFixoComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm2015/material.js");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/es2015/index.js");
+/* harmony import */ var _quiz_quiz_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../quiz/quiz.component */ "./src/app/quiz/quiz.component.ts");
+
+
+
+
+
+let BotoesFixoComponent = class BotoesFixoComponent {
+    constructor(dialog, db) {
+        this.dialog = dialog;
+        this.db = db;
+        this.atualizaNoticias = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.questions = ["Have children?", "Like music?"];
+        this.questionIndex = 0;
+        this.question = this.questions[this.questionIndex];
+    }
+    ngOnInit() { }
+    abrirFatoOuFake() {
+        window.open("https://www.saude.gov.br/component/tags/tag/novo-coronavirus-fake-news?limitstart=0", "_blank");
+    }
+    voceTemCovid() {
+        window.open("bit.ly/sauderesponde", "_blank");
+    }
+    responder(response) {
+        this.questionIndex++;
+        this.question = this.questions[this.questionIndex];
+        debugger;
+        if (response === true) {
+            this.atualizaNoticias.emit(2);
+        }
+    }
+    abrirQuiz() {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            const dialogRef = this.dialog.open(_quiz_quiz_component__WEBPACK_IMPORTED_MODULE_4__["QuizComponent"]);
+            dialogRef.afterClosed().subscribe((result) => tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+                this.db.collection("quiz").add(Object.assign({}, result, { dataInclusao: new Date() }));
+            }));
+        });
+    }
+};
+BotoesFixoComponent.ctorParameters = () => [
+    { type: _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialog"] },
+    { type: _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_3__["AngularFirestore"] }
+];
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
+], BotoesFixoComponent.prototype, "atualizaNoticias", void 0);
+BotoesFixoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: "app-botoes-fixo",
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./botoes-fixo.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/botoes-fixo/botoes-fixo.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./botoes-fixo.component.less */ "./src/app/botoes-fixo/botoes-fixo.component.less")).default]
+    })
+], BotoesFixoComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/categorias/categorias.component.less":
 /*!******************************************************!*\
   !*** ./src/app/categorias/categorias.component.less ***!
@@ -968,7 +1041,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".categorias {\n  display: flex;\n  width: 30vw;\n}\n@media only screen and (max-width: 590px) {\n  .categorias {\n    width: 91%;\n    margin: 10px 0px;\n  }\n}\n.categorias img {\n  flex-basis: auto;\n  width: 80%;\n}\n@media only screen and (max-width: 590px) {\n  .categorias img {\n    width: 91%;\n  }\n}\n.categorias .hashitag {\n  border-radius: 0px 10px 10px 0px;\n  width: 50px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.categorias .hashitag h1 {\n  transform: rotate(270deg);\n  margin: unset;\n  color: white;\n  font-size: 1em;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL25ldG8vbmFzYS9jb3ZpZC0xOS9zcmMvYXBwL2NhdGVnb3JpYXMvY2F0ZWdvcmlhcy5jb21wb25lbnQubGVzcyIsInNyYy9hcHAvY2F0ZWdvcmlhcy9jYXRlZ29yaWFzLmNvbXBvbmVudC5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBQTtFQUNBLFdBQUE7QUNDRjtBRENFO0VBQUE7SUFDRSxVQUFBO0lBQ0EsZ0JBQUE7RUNFRjtBQUNGO0FEQUU7RUFDRSxnQkFBQTtFQUNBLFVBQUE7QUNFSjtBREFJO0VBQUE7SUFDRSxVQUFBO0VDR0o7QUFDRjtBRERFO0VBQ0UsZ0NBQUE7RUFDQSxXQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7QUNHSjtBRERJO0VBQ0UseUJBQUE7RUFDQSxhQUFBO0VBQ0EsWUFBQTtFQUNBLGNBQUE7QUNHTiIsImZpbGUiOiJzcmMvYXBwL2NhdGVnb3JpYXMvY2F0ZWdvcmlhcy5jb21wb25lbnQubGVzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jYXRlZ29yaWFzIHtcbiAgZGlzcGxheTogZmxleDtcbiAgd2lkdGg6IDMwdnc7XG5cbiAgQG1lZGlhIG9ubHkgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA1OTBweCkge1xuICAgIHdpZHRoOiA5MSU7XG4gICAgbWFyZ2luOiAxMHB4IDBweDtcbiAgfVxuXG4gICYgaW1nIHtcbiAgICBmbGV4LWJhc2lzOiBhdXRvO1xuICAgIHdpZHRoOiA4MCU7XG5cbiAgICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDU5MHB4KSB7XG4gICAgICB3aWR0aDogOTElO1xuICAgIH1cbiAgfVxuICAmIC5oYXNoaXRhZyB7XG4gICAgYm9yZGVyLXJhZGl1czogMHB4IDEwcHggMTBweCAwcHg7XG4gICAgd2lkdGg6IDUwcHg7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuXG4gICAgJiBoMSB7XG4gICAgICB0cmFuc2Zvcm06IHJvdGF0ZSgyNzBkZWcpO1xuICAgICAgbWFyZ2luOiB1bnNldDtcbiAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICAgIGZvbnQtc2l6ZTogMWVtO1xuICAgIH1cbiAgfVxufVxuIiwiLmNhdGVnb3JpYXMge1xuICBkaXNwbGF5OiBmbGV4O1xuICB3aWR0aDogMzB2dztcbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNTkwcHgpIHtcbiAgLmNhdGVnb3JpYXMge1xuICAgIHdpZHRoOiA5MSU7XG4gICAgbWFyZ2luOiAxMHB4IDBweDtcbiAgfVxufVxuLmNhdGVnb3JpYXMgaW1nIHtcbiAgZmxleC1iYXNpczogYXV0bztcbiAgd2lkdGg6IDgwJTtcbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNTkwcHgpIHtcbiAgLmNhdGVnb3JpYXMgaW1nIHtcbiAgICB3aWR0aDogOTElO1xuICB9XG59XG4uY2F0ZWdvcmlhcyAuaGFzaGl0YWcge1xuICBib3JkZXItcmFkaXVzOiAwcHggMTBweCAxMHB4IDBweDtcbiAgd2lkdGg6IDUwcHg7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xufVxuLmNhdGVnb3JpYXMgLmhhc2hpdGFnIGgxIHtcbiAgdHJhbnNmb3JtOiByb3RhdGUoMjcwZGVnKTtcbiAgbWFyZ2luOiB1bnNldDtcbiAgY29sb3I6IHdoaXRlO1xuICBmb250LXNpemU6IDFlbTtcbn1cbiJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".categorias {\n  display: flex;\n  width: 30vw;\n}\n@media only screen and (max-width: 590px) {\n  .categorias {\n    width: 91%;\n    margin: 10px 0px;\n  }\n}\n.categorias img {\n  flex-basis: auto;\n  width: 80%;\n}\n@media only screen and (max-width: 590px) {\n  .categorias img {\n    width: 91%;\n  }\n}\n.categorias .hashitag {\n  border-radius: 0px 10px 10px 0px;\n  width: 50px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.categorias .hashitag h1 {\n  transform: rotate(270deg);\n  margin: unset;\n  color: white;\n  font-size: 1em;\n  white-space: nowrap;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL25ldG8vbmFzYS9jb3ZpZC0xOS9zcmMvYXBwL2NhdGVnb3JpYXMvY2F0ZWdvcmlhcy5jb21wb25lbnQubGVzcyIsInNyYy9hcHAvY2F0ZWdvcmlhcy9jYXRlZ29yaWFzLmNvbXBvbmVudC5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBQTtFQUNBLFdBQUE7QUNDRjtBRENFO0VBQUE7SUFDRSxVQUFBO0lBQ0EsZ0JBQUE7RUNFRjtBQUNGO0FEQUU7RUFDRSxnQkFBQTtFQUNBLFVBQUE7QUNFSjtBREFJO0VBQUE7SUFDRSxVQUFBO0VDR0o7QUFDRjtBRERFO0VBQ0UsZ0NBQUE7RUFDQSxXQUFBO0VBQ0EsYUFBQTtFQUNBLG1CQUFBO0VBQ0EsdUJBQUE7QUNHSjtBRERJO0VBQ0UseUJBQUE7RUFDQSxhQUFBO0VBQ0EsWUFBQTtFQUNBLGNBQUE7RUFDQSxtQkFBQTtBQ0dOIiwiZmlsZSI6InNyYy9hcHAvY2F0ZWdvcmlhcy9jYXRlZ29yaWFzLmNvbXBvbmVudC5sZXNzIiwic291cmNlc0NvbnRlbnQiOlsiLmNhdGVnb3JpYXMge1xuICBkaXNwbGF5OiBmbGV4O1xuICB3aWR0aDogMzB2dztcblxuICBAbWVkaWEgb25seSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDU5MHB4KSB7XG4gICAgd2lkdGg6IDkxJTtcbiAgICBtYXJnaW46IDEwcHggMHB4O1xuICB9XG5cbiAgJiBpbWcge1xuICAgIGZsZXgtYmFzaXM6IGF1dG87XG4gICAgd2lkdGg6IDgwJTtcblxuICAgIEBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNTkwcHgpIHtcbiAgICAgIHdpZHRoOiA5MSU7XG4gICAgfVxuICB9XG4gICYgLmhhc2hpdGFnIHtcbiAgICBib3JkZXItcmFkaXVzOiAwcHggMTBweCAxMHB4IDBweDtcbiAgICB3aWR0aDogNTBweDtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG5cbiAgICAmIGgxIHtcbiAgICAgIHRyYW5zZm9ybTogcm90YXRlKDI3MGRlZyk7XG4gICAgICBtYXJnaW46IHVuc2V0O1xuICAgICAgY29sb3I6IHdoaXRlO1xuICAgICAgZm9udC1zaXplOiAxZW07XG4gICAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xuICAgIH1cbiAgfVxufVxuIiwiLmNhdGVnb3JpYXMge1xuICBkaXNwbGF5OiBmbGV4O1xuICB3aWR0aDogMzB2dztcbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNTkwcHgpIHtcbiAgLmNhdGVnb3JpYXMge1xuICAgIHdpZHRoOiA5MSU7XG4gICAgbWFyZ2luOiAxMHB4IDBweDtcbiAgfVxufVxuLmNhdGVnb3JpYXMgaW1nIHtcbiAgZmxleC1iYXNpczogYXV0bztcbiAgd2lkdGg6IDgwJTtcbn1cbkBtZWRpYSBvbmx5IHNjcmVlbiBhbmQgKG1heC13aWR0aDogNTkwcHgpIHtcbiAgLmNhdGVnb3JpYXMgaW1nIHtcbiAgICB3aWR0aDogOTElO1xuICB9XG59XG4uY2F0ZWdvcmlhcyAuaGFzaGl0YWcge1xuICBib3JkZXItcmFkaXVzOiAwcHggMTBweCAxMHB4IDBweDtcbiAgd2lkdGg6IDUwcHg7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xufVxuLmNhdGVnb3JpYXMgLmhhc2hpdGFnIGgxIHtcbiAgdHJhbnNmb3JtOiByb3RhdGUoMjcwZGVnKTtcbiAgbWFyZ2luOiB1bnNldDtcbiAgY29sb3I6IHdoaXRlO1xuICBmb250LXNpemU6IDFlbTtcbiAgd2hpdGUtc3BhY2U6IG5vd3JhcDtcbn1cbiJdfQ== */");
 
 /***/ }),
 
@@ -1281,8 +1354,8 @@ let HomeComponent = class HomeComponent {
             maintainAspectRatio: true
         };
         this.pieChartLabels = [
-            ["Obitos"],
-            ["Casos"],
+            ["Deaths"],
+            ["Cases"],
             ["Casos", "Suspeitos"],
         ];
         this.pieChartData = [0, 0, 0];
@@ -1292,95 +1365,95 @@ let HomeComponent = class HomeComponent {
         this.porcentagemCasos = "94.23";
         this.quantidadeTotalCasos = "496612";
         this.quantidadeObitos = "28665";
-        this.textoQuantidadeCasos = this.quantidadeTotalCasos + " casos de Covid-19";
-        this.textoQuantidadeObitos = this.quantidadeObitos + " óbitos por Covid-19";
+        this.textoQuantidadeCasos = this.quantidadeTotalCasos + " Covid-19 cases";
+        this.textoQuantidadeObitos = this.quantidadeObitos + " Death by Covid-19";
         this.categorias = [
             [
                 {
                     url: "https://g1.globo.com/politica/noticia/2020/05/30/tudo-aponta-para-uma-crise-diz-bolsonaro-ao-citar-reportagens-sobre-decisoes-do-judiciario-a-respeito-do-governo-e-seus-aliados.ghtml",
                     imagem: "/assets/arquivos/politica1.jpeg",
-                    hashitag: "#politica",
+                    hashitag: "#politics",
                 },
                 {
                     url: "https://www.youtube.com/watch?v=cWumyKjowsY",
                     imagem: "/assets/arquivos/politica2.jpeg",
-                    hashitag: "#politica",
+                    hashitag: "#politics",
                 },
                 {
                     url: "https://valorinveste.globo.com/mercados/brasil-e-politica/noticia/2020/05/30/brasil-ultrapassa-franca-e-e-quarto-pais-com-mais-mortes-por-covid-19.ghtml",
                     imagem: "/assets/arquivos/politica3.jpeg",
-                    hashitag: "#politica",
+                    hashitag: "#politics",
                 },
                 {
                     url: "https://veja.abril.com.br/politica/covid-pela-primeira-vez-eleicoes-podem-ser-realizadas-em-dois-dias/",
                     imagem: "/assets/arquivos/politica4.jpeg",
-                    hashitag: "#politica",
+                    hashitag: "#politics",
                 },
             ],
             [
                 {
                     url: "https://epocanegocios.globo.com/Tecnologia/noticia/2020/05/como-equipe-da-fiocruz-trabalha-na-vacina-brasileira-para-covid-19.html",
                     imagem: "/assets/arquivos/vacina1.jpeg",
-                    hashitag: "#vacina",
+                    hashitag: "#vaccine",
                 },
                 {
                     url: "https://www.cnnbrasil.com.br/saude/2020/05/25/mais-uma-vacina-contra-a-covid-19-comeca-a-ser-testada-em-humanos",
                     imagem: "/assets/arquivos/vacina2.jpeg",
-                    hashitag: "#vacina",
+                    hashitag: "#vaccine",
                 },
                 {
                     url: "https://www.cnnbrasil.com.br/saude/2020/05/27/quando-teremos-uma-vacina-para-a-covid-19",
                     imagem: "/assets/arquivos/vacina3.jpeg",
-                    hashitag: "#vacina",
+                    hashitag: "#vaccine",
                 },
                 {
                     url: "https://noticias.uol.com.br/saude/ultimas-noticias/redacao/2020/05/30/governador-da-bahia-descarta-carnaval-sem-vacina-contra-covid-19.htm",
                     imagem: "/assets/arquivos/vacina4.jpeg",
-                    hashitag: "#vacina",
+                    hashitag: "#vaccine",
                 },
             ],
             [
                 {
                     url: "https://www.ladoaladopelavida.org.br/detalhe-noticia-ser-informacao/veja-as-dicas-da-oms-para-se-proteger-do-novo-coronavirus",
                     imagem: "/assets/arquivos/dicas1.jpeg",
-                    hashitag: "#dicas-e-informacoes",
+                    hashitag: "#tips-and-info",
                 },
                 {
                     url: "https://www.youtube.com/watch?v=MSsuOF3VRYY",
                     imagem: "/assets/arquivos/dicas2.jpeg",
-                    hashitag: "#dicas-e-informacoes",
+                    hashitag: "#tips-and-info",
                 },
                 {
                     url: "https://g1.globo.com/mundo/noticia/2020/04/19/coronavirus-precisou-sair-especialistas-dao-dicas-para-evitar-trazer-o-virus-para-dentro-de-casa.ghtml",
                     imagem: "/assets/arquivos/dicas3.jpeg",
-                    hashitag: "#dicas-e-informacoes",
+                    hashitag: "#tips-and-info",
                 },
                 {
                     url: "https://gauchazh.clicrbs.com.br/fique-bem/noticia/2020/05/pets-e-coronavirus-cuidados-com-passeios-e-dicas-para-evitar-o-estresse-do-seu-amigo-de-quatro-patas-ck9vl2ocx0086015nosi0u0km.html",
                     imagem: "/assets/arquivos/dicas4.jpeg",
-                    hashitag: "#dicas-e-informacoes",
+                    hashitag: "#tips-and-info",
                 },
             ],
             [
                 {
                     url: "https://revistacrescer.globo.com/Criancas/Saude/noticia/2020/03/coronavirus-como-entreter-criancas-em-casa-com-aulas-suspensas.html",
                     imagem: "/assets/arquivos/filhos1.jpeg",
-                    hashitag: "#filhos",
+                    hashitag: "#children",
                 },
                 {
                     url: "https://diariodorio.com/crianca-de-2-anos-vence-a-covid-19-apos-12-dias-entubada-em-vila-isabel/",
                     imagem: "/assets/arquivos/filhos2.jpeg",
-                    hashitag: "#filhos",
+                    hashitag: "#children",
                 },
                 {
                     url: "https://www.uol.com.br/vivabem/noticias/bbc/2020/04/05/por-que-as-criancas-sao-afetadas-de-maneira-diferente-pelo-coronavirus.htm",
                     imagem: "/assets/arquivos/filhos3.jpeg",
-                    hashitag: "#filhos",
+                    hashitag: "#children",
                 },
                 {
                     url: "https://www.hospitalinfantilsabara.org.br/o-novo-coronavirus/",
                     imagem: "/assets/arquivos/filhos4.jpeg",
-                    hashitag: "#filhos",
+                    hashitag: "#children",
                 },
             ],
             [
@@ -1449,10 +1522,10 @@ let HomeComponent = class HomeComponent {
                 quantitativoLeitos.leitosUtiImplantacao.qtd +
                     quantitativoLeitos.leitosImplantacao.qtd +
                     quantitativoLeitos.leitosEnfermariaImplantacao.qtd;
-            this.textoQuantidadeTotal = this.quantidadeTotal + " Leitos Covid-19";
+            this.textoQuantidadeTotal = this.quantidadeTotal + " Covid-19 beds";
             this.textoQuantidadeLivres =
-                this.quantidadeLivres + " Leitos livres Covid-19";
-            this.dataUltimaAtualizacao = quantitativoLeitos.ultimaAtualizacao.toDate().toLocaleString();
+                this.quantidadeLivres + " Covid-19 free beds";
+            this.dataUltimaAtualizacao = quantitativoLeitos.ultimaAtualizacao.toDate().toString();
         });
         this.db
             .collection("casos_estados")
@@ -1464,8 +1537,18 @@ let HomeComponent = class HomeComponent {
                 quantidadeCasos.total.casosConfirmados,
                 quantidadeCasos.total.casosSuspeitos,
             ];
-            this.dataUltimaAtualizacaoLeitos = quantidadeCasos.ultimaAtualizacao.toDate().toLocaleString();
+            this.dataUltimaAtualizacaoLeitos = quantidadeCasos.ultimaAtualizacao.toDate().toString();
         });
+    }
+    atualizaNoticias(group) {
+        debugger;
+        if (group === 2) {
+            this.categoriasLocais = [
+                this.categorias[0],
+                this.categorias[3],
+                this.categorias[4],
+            ];
+        }
     }
     iniciaMapa() {
         var raster = new ol_layer__WEBPACK_IMPORTED_MODULE_13__["Tile"]({
