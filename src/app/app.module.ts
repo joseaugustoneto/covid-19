@@ -59,16 +59,7 @@ import { RecebaNoticiasComponent } from './receba-noticias/receba-noticias.compo
     FormsModule,
     ReactiveFormsModule,
     MatRadioModule,
-    AngularFireModule.initializeApp({
-      apiKey: "AIzaSyAFuvI4xzbSw02dYUGy4igGjGPbRQuhnGc",
-      authDomain: "covid-19-60618.firebaseapp.com",
-      databaseURL: "https://covid-19-60618.firebaseio.com",
-      projectId: "covid-19-60618",
-      storageBucket: "covid-19-60618.appspot.com",
-      messagingSenderId: "702144438972",
-      appId: "1:702144438972:web:e37704bde68fe7a5fee6b9",
-      measurementId: "G-MJS1KQRZ7P"
-    }),
+    AngularFireModule.initializeApp(),
     AngularFirestoreModule,
     ChartsModule,
     MatProgressBarModule,
