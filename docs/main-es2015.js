@@ -341,7 +341,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"botoesFixos\">\n  <div (click)=\"abrirFatoOuFake()\">#Fake-or-fact</div>\n  <div (click)=\"abrirReceberNoticias()\" >#receive-wherever</div>\n  <div (click)=\"abrirQuiz()\">#Quiz</div>\n  <div (click)=\"voceTemCovid()\">#Do-I-have-covid?</div>\n  <div class=\"personalizacao\">\n    {{ question }}\n    <div (click)=\"responder(true)\" class=\"yes\"></div>\n    <div (click)=\"responder(false)\" class=\"no\"><hr /></div>\n  </div>\n  <div class=\"idioma\">\n    <img src=\"/assets/bandeiras.png\" />\n  </div>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"botoesFixos\">\n  <div (click)=\"abrirFatoOuFake()\">#Fake-or-fact</div>\n  <div (click)=\"abrirReceberNoticias()\" >#receive-anywhere</div>\n  <div (click)=\"abrirQuiz()\">#Quiz</div>\n  <div (click)=\"voceTemCovid()\">#Do-I-have-covid?</div>\n  <div class=\"personalizacao\">\n    {{ question }}\n    <div (click)=\"responder(true)\" class=\"yes\"></div>\n    <div (click)=\"responder(false)\" class=\"no\"><hr /></div>\n  </div>\n  <div class=\"idioma\">\n    <img src=\"/assets/bandeiras.png\" />\n  </div>\n</div>\n");
 
 /***/ }),
 
@@ -458,7 +458,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<h1 mat-dialog-title>Recive Wherever</h1>\n<div mat-dialog-content>\n  <div class=\"recive\">\n    <img src=\"/assets/whatsapp.jpeg\" />\n    <img src=\"/assets/googleplay.jpg\" />\n    <img src=\"/assets/email.png\" />\n    <img src=\"/assets/sms.jpeg\" />\n  </div>\n</div>\n<div mat-dialog-actions>\n  <button mat-button (click)=\"onNoClick()\">Fechar</button>\n</div>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<h1 mat-dialog-title>Recive Anywhere</h1>\n<div mat-dialog-content>\n  <div class=\"recive\">\n    <img src=\"/assets/whatsapp.jpeg\" />\n    <img src=\"/assets/googleplay.jpg\" />\n    <img src=\"/assets/email.png\" />\n    <img src=\"/assets/sms.jpeg\" />\n  </div>\n</div>\n<div mat-dialog-actions>\n  <button mat-button (click)=\"onNoClick()\">Close</button>\n</div>\n");
 
 /***/ }),
 
