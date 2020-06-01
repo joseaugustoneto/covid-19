@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>Quiz Corona Central</h1>
+<div class="perguntaResposta" mat-dialog-content>
+  <div *ngIf="!finalizou">
+    <div>Question: {{ perguntaAtual.pergunta }}</div>
+    <br />
+    <div class="resposta" *ngIf="!esconderResposta">
+      {{ perguntaAtual.resposta }}
+    </div>
+  </div>
+  <br />
+  <div *ngIf="esconderResposta">
+    <button mat-button (click)="mostraResposta(true)">TRUE</button>
+    <button mat-button (click)="mostraResposta(falso)">FALSE</button>
+  </div>
+  <div *ngIf="!esconderResposta && !finalizou">
+    <button mat-button (click)="proxima()">NEXT</button>
+  </div>
+  <div *ngIf="!esconderResposta && finalizou">
+    <div>
+      Thanks for answering our quiz, we hope you managed to get information by
+      having fun!
+    </div>
+    <button mat-button (click)="onNoClick()">Close</button>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Close</button>
+</div>

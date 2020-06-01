@@ -1,0 +1,94 @@
+<app-botoes-fixo (atualizaNoticias)="atualizaNoticias($event)"></app-botoes-fixo>
+<div class="primeiraParte red">
+  <div class="siteEsquerda">
+    <img src="/assets/corona_central_unlinking_fakenews.png" />
+    <div class="caixa">
+      <div class="top">
+        <div class="totalStatus">Total Status</div>
+      </div>
+      <div class="conteudo">
+        <h3>Cases in Goiás</h3>
+        <div class="canvas">
+        <canvas
+          baseChart
+          [data]="pieChartData"
+          [labels]="pieChartLabels"
+          [chartType]="pieChartType"
+          [options]="pieChartOptions"
+          [plugins]="pieChartPlugins"
+          [legend]="pieChartLegend"
+        >
+        </canvas>
+      </div>
+        <h4>Last update: {{dataUltimaAtualizacao}}</h4>
+      </div>
+    </div>
+  </div>
+  <div class="siteDireita">
+    <div class="caixa">
+      <div class="top">
+        <div class="totalStatus">Map of confirmed cases</div>
+      </div>
+      <div class="conteudo">
+        <!-- <div id="map" class="map"></div> -->
+        <img src="/assets/mapa_br2-removebg-preview.png" />
+      </div>
+    </div>
+  </div>
+</div>
+<div class="leitos red">
+  <h3>Covid-19 beds occupation in hospitals</h3>
+  <div class="qtdeLeitos">
+    <h4>{{ quantidadeTotal }} total beds</h4>
+    <h4>{{ quantidadeOcupados }} occupied beds</h4>
+    <h4>{{ quantidadeLivres }} free beds</h4>
+    <h4>{{ quantidadeConstrucao }} beds under construction</h4>
+  </div>
+  <div class="porcentagemLeitos">
+    <h3>{{ textoQuantidadeTotal }}</h3>
+    <mat-progress-bar
+      mode="determinate"
+      [value]="porcentagemLeitos"
+      class="progressBar"
+    >
+    </mat-progress-bar>
+    <div class="descricaoPorcentagem">
+      <div class="porcentagem2">
+        <div class="circulo"></div>
+        <hr />
+        <h3>{{ textoQuantidadeLivres }}</h3>
+      </div>
+    </div>
+  </div>
+  <h4>Last update: {{dataUltimaAtualizacaoLeitos}}</h4>
+</div>
+
+<div class="noticias">
+  <app-categorias
+    *ngFor="let item of categoriasLocais"
+    [noticia]="item"
+  ></app-categorias>
+</div>
+
+<div class="worldCases">
+  <div class="porcentagemLeitos">
+    <h3>{{ textoQuantidadeCasos }}</h3>
+    <mat-progress-bar
+      mode="determinate"
+      [value]="porcentagemCasos"
+      class="progressBar"
+    >
+    </mat-progress-bar>
+    <div class="descricaoPorcentagem">
+      <div class="porcentagem2">
+        <div class="circulo"></div>
+        <hr />
+        <h3>{{ textoQuantidadeObitos }}</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="graficsWorld">
+  <img src="/assets/graph.png" />
+</div>

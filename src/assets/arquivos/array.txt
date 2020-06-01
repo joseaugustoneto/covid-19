@@ -1,0 +1,113 @@
+[
+    [
+      {
+        url: "https://g1.globo.com/politica/noticia/2020/05/30/tudo-aponta-para-uma-crise-diz-bolsonaro-ao-citar-reportagens-sobre-decisoes-do-judiciario-a-respeito-do-governo-e-seus-aliados.ghtml",
+        imagem: "/assets/politica1.jpeg",
+        hashitag: "#politica",
+      },
+      {
+        url: "https://www.youtube.com/watch?v=cWumyKjowsY",
+        imagem: "/assets/politica2.jpeg",
+        hashitag: "#politica",
+      },
+      {
+        url: "https://valorinveste.globo.com/mercados/brasil-e-politica/noticia/2020/05/30/brasil-ultrapassa-franca-e-e-quarto-pais-com-mais-mortes-por-covid-19.ghtml",
+        imagem: "/assets/politica3.jpeg",
+        hashitag: "#politica",
+      },
+      {
+        url: "https://veja.abril.com.br/politica/covid-pela-primeira-vez-eleicoes-podem-ser-realizadas-em-dois-dias/",
+        imagem: "/assets/politica4.jpeg",
+        hashitag: "#politica",
+      },
+
+    ],
+    [
+      {
+        url: "https://epocanegocios.globo.com/Tecnologia/noticia/2020/05/como-equipe-da-fiocruz-trabalha-na-vacina-brasileira-para-covid-19.html",
+        imagem: "/assets/vacina1.jpeg",
+        hashitag: "#vacina",
+      },
+      {
+        url: "https://www.cnnbrasil.com.br/saude/2020/05/25/mais-uma-vacina-contra-a-covid-19-comeca-a-ser-testada-em-humanos",
+        imagem: "/assets/vacina2.jpeg",
+        hashitag: "#vacina",
+      },
+      {
+        url: "https://www.cnnbrasil.com.br/saude/2020/05/27/quando-teremos-uma-vacina-para-a-covid-19",
+        imagem: "/assets/vacina3.jpeg",
+        hashitag: "#vacina",
+      },
+      {
+        url: "https://noticias.uol.com.br/saude/ultimas-noticias/redacao/2020/05/30/governador-da-bahia-descarta-carnaval-sem-vacina-contra-covid-19.htm",
+        imagem: "/assets/vacina4.jpeg",
+        hashitag: "#vacina",
+      },
+    ],
+    [
+      {
+        url: "https://www.ladoaladopelavida.org.br/detalhe-noticia-ser-informacao/veja-as-dicas-da-oms-para-se-proteger-do-novo-coronavirus",
+        imagem: "/assets/dicas1.jpeg",
+        hashitag: "#dicas-e-informacoes",
+      },
+      {
+        url: "https://www.youtube.com/watch?v=MSsuOF3VRYY",
+        imagem: "/assets/dicas2.jpeg",
+        hashitag: "#dicas-e-informacoes",
+      },
+      {
+        url: "https://g1.globo.com/mundo/noticia/2020/04/19/coronavirus-precisou-sair-especialistas-dao-dicas-para-evitar-trazer-o-virus-para-dentro-de-casa.ghtml",
+        imagem: "/assets/dicas3.jpeg",
+        hashitag: "#dicas-e-informacoes",
+      },
+      {
+        url: "https://gauchazh.clicrbs.com.br/fique-bem/noticia/2020/05/pets-e-coronavirus-cuidados-com-passeios-e-dicas-para-evitar-o-estresse-do-seu-amigo-de-quatro-patas-ck9vl2ocx0086015nosi0u0km.html",
+        imagem: "/assets/dicas4.jpeg",
+        hashitag: "#dicas-e-informacoes",
+      },
+    ],
+    [
+      {
+        url: "https://revistacrescer.globo.com/Criancas/Saude/noticia/2020/03/coronavirus-como-entreter-criancas-em-casa-com-aulas-suspensas.html",
+        imagem: "/assets/filhos1.jpeg",
+        hashitag: "#filhos",
+      },
+      {
+        url: "https://diariodorio.com/crianca-de-2-anos-vence-a-covid-19-apos-12-dias-entubada-em-vila-isabel/",
+        imagem: "/assets/filhos2.jpeg",
+        hashitag: "#filhos",
+      },
+      {
+        url: "https://www.uol.com.br/vivabem/noticias/bbc/2020/04/05/por-que-as-criancas-sao-afetadas-de-maneira-diferente-pelo-coronavirus.htm",
+        imagem: "/assets/filhos3.jpeg",
+        hashitag: "#filhos",
+      },
+      {
+        url: "https://www.hospitalinfantilsabara.org.br/o-novo-coronavirus/",
+        imagem: "/assets/filhos4.jpeg",
+        hashitag: "#filhos",
+      },
+    ],
+    [
+      {
+        url: "https://www.youtube.com/watch?v=Ifuhboesum4",
+        imagem: "/assets/lives1.jpeg",
+        hashitag: "#lives",
+      },
+      {
+       url: "https://www.youtube.com/watch?v=a1kJciCakEY",
+        imagem: "/assets/lives2.jpeg",
+        hashitag: "#lives",
+      },
+      {
+        url: "https://www.youtube.com/watch?v=GHFpWr69kWc",
+        imagem: "/assets/lives3.jpeg",
+        hashitag: "#lives",
+      },
+      {
+        url: "https://www.youtube.com/watch?v=21X5lGlDOfg",
+        imagem: "/assets/lives4.jpeg",
+        hashitag: "#lives",
+      },
+    ],
+  ]

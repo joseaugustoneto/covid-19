@@ -1,0 +1,20 @@
+<button class="buttonMenu" mat-icon-button (click)="toggle()">
+  <mat-icon>menu</mat-icon>
+</button>
+
+<div class="botoesFixos">
+  <div (click)="abrirFatoOuFake()">#Fake-or-fact</div>
+  <div (click)="abrirReceberNoticias()" >#receive-anywhere</div>
+  <div (click)="abrirQuiz()">#Quiz</div>
+  <div (click)="voceTemCovid()">#Do-I-have-covid?</div>
+  <div class="personalizacao">
+    {{ question }}
+    <div (click)="responder(true)" class="yes"></div>
+    <div (click)="responder(false)" class="no"><hr /></div>
+  </div>
+  <div class="idioma">
+    <img src="/assets/bandeiras.png" />
+  </div>
+</div>
+
+<div class="blackout" (click)="toggle()"></div>

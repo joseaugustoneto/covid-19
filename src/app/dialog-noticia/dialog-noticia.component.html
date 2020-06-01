@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>{{data[0].hashitag}}</h1>
+<div mat-dialog-content>
+  <div *ngFor="let item of data">
+    <app-noticias [imagem]="item.imagem" [url]="item.url"></app-noticias>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Fechar</button>
+</div>

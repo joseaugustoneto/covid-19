@@ -1,0 +1,46 @@
+@corPrincipal: #e30613;
+@corEscura: #851104;
+@corSegundaria: white;
+
+.header {
+  height: 100px;
+  background-color: @corSegundaria;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+
+  @media only screen and (max-width: 780px) {
+    height: 70px;
+  }
+  @media only screen and (max-width: 700px) {
+    margin-top: unset;
+  }
+  @media only screen and (max-width: 440px) {
+    height: 59px;
+  }
+  & img {
+    height: 153%;
+    top: 30px;
+    position: relative;
+
+    @media only screen and (max-width: 780px) {
+      height: 145%;
+      top: 22px;
+    }
+
+    @media only screen and (max-width: 440px) {
+      height: 120%;
+      top: 22px;
+    }
+  }
+}
+
+.rodape {
+  background-color: @corEscura;
+  & .direitos {
+    color: @corSegundaria;
+    text-align: center;
+    height: 30px;
+  }
+}
