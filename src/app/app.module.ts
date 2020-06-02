@@ -28,6 +28,7 @@ import { CategoriasComponent } from './categorias/categorias.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { BotoesFixoComponent } from './botoes-fixo/botoes-fixo.component';
 import { RecebaNoticiasComponent } from './receba-noticias/receba-noticias.component';
+import { MapaComponent } from './mapa/mapa.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { RecebaNoticiasComponent } from './receba-noticias/receba-noticias.compo
     CategoriasComponent,
     QuizComponent,
     BotoesFixoComponent,
-    RecebaNoticiasComponent
+    RecebaNoticiasComponent,
+    MapaComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +61,16 @@ import { RecebaNoticiasComponent } from './receba-noticias/receba-noticias.compo
     FormsModule,
     ReactiveFormsModule,
     MatRadioModule,
-    AngularFireModule.initializeApp(),
+    AngularFireModule.initializeApp({
+      apiKey: "AIzaSyAFuvI4xzbSw02dYUGy4igGjGPbRQuhnGc",
+      authDomain: "covid-19-60618.firebaseapp.com",
+      databaseURL: "https://covid-19-60618.firebaseio.com",
+      projectId: "covid-19-60618",
+      storageBucket: "covid-19-60618.appspot.com",
+      messagingSenderId: "702144438972",
+      appId: "1:702144438972:web:e37704bde68fe7a5fee6b9",
+      measurementId: "G-MJS1KQRZ7P"
+    }),
     AngularFirestoreModule,
     ChartsModule,
     MatProgressBarModule,

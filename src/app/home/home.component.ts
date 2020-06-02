@@ -55,10 +55,9 @@ export class HomeComponent implements OnInit {
   };
   public pieChartLabels: Label[] = [
     ["Deaths"],
-    ["Cases"],
-    ["Casos", "Suspeitos"],
+    ["Cases"]
   ];
-  public pieChartData: SingleDataSet = [0, 0, 0];
+  public pieChartData: SingleDataSet = [0, 0];
   public pieChartType: ChartType = "doughnut";
   public pieChartLegend = true;
   public pieChartPlugins = [];
@@ -82,6 +81,8 @@ export class HomeComponent implements OnInit {
   public textoQuantidadeCasos =
     this.quantidadeTotalCasos + " Covid-19 cases";
   public textoQuantidadeObitos = this.quantidadeObitos + " Death by Covid-19";
+
+  public estado = "Goiás";
 
   public categorias = [
     [
@@ -276,7 +277,6 @@ export class HomeComponent implements OnInit {
         this.pieChartData = [
           quantidadeCasos.total.obitosConfirmados,
           quantidadeCasos.total.casosConfirmados,
-          quantidadeCasos.total.casosSuspeitos,
         ];
 
         this.dataUltimaAtualizacaoLeitos = quantidadeCasos.ultimaAtualizacao.toDate().toString()
@@ -284,7 +284,6 @@ export class HomeComponent implements OnInit {
   }
 
   atualizaNoticias(group) {
-    debugger;
     if(group=== 2) {
       this.categoriasLocais = [
         this.categorias[0],
@@ -294,71 +293,11 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  iniciaMapa() {
-    var raster = new TileLayer({
-      source: new OSM(),
-    });
-
-    var vector = new VectorLayer({
-      source: new VectorSource({
-        url: "assets/brazil-states.geojson",
-        format: new GeoJSON(),
-      }),
-    });
-
-    this.map = new Map({
-      interactions: defaults({ mouseWheelZoom: true }).extend([
-        new DragPan({
-          condition: function (event) {
-            return (
-              this.getPointerCount() === 2 || platformModifierKeyOnly(event)
-            );
-          },
-        }),
-      ]),
-      layers: [raster, vector],
-      target: "map",
-      view: new View({
-        center: fromLonLat([-49.004627, -15.855103]),
-        zoom: 6,
-      }),
-    });
-
-    // var size = new OpenLayers.Size(21, 25);
-    // var offset = new OpenLayers.Pixel(-(size.w / 2), -size.h);
-    // var icon = new OpenLayers.Icon(
-    //   "http://www.openlayers.org/dev/img/marker.png",
-    //   size,
-    //   offset
-    // );
-    // markers.addMarker(new OpenLayers.Marker(new OpenLayers.LonLat(0, 0), icon));
-    // markers.addMarker(
-    //   new OpenLayers.Marker(new OpenLayers.LonLat(0, 0), icon.clone())
-    // );
-
-    // this.map.addLayer(layer);
-
-    this.map.addInteraction(this.selectClick);
-    this.map.on("", function (e) {
-      debugger;
-      e.browserEvent.preventDefault();
-      var now = new Date();
-      if (this.lastScrollZoom === null || now > this.lastScrollZoom) {
-        var zoom_in = e.browserEvent.deltaY < 0;
-        this._panAndZoom(e.map, zoom_in, e.coordinate);
-        this.lastScrollZoom = now.setMilliseconds(now.getMilliseconds() + 1);
-      }
-    });
-    this.selectClick.on("select", function (e) {
-      debugger;
-      document.getElementById("status").innerHTML =
-        "&nbsp;" +
-        e.target.getFeatures().getLength() +
-        " selected features (last operation selected " +
-        e.selected.length +
-        " and deselected " +
-        e.deselected.length +
-        " features)";
-    });
+  selecionaEstado(infos) {
+    this.pieChartData = [
+      infos.estado.obitos,
+      infos.estado.casos
+    ];
+    this.estado = infos.nome
   }
 }
